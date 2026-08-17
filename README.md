@@ -1,2 +1,2 @@
-# www.bukotechnologies.com
-Website for buko technologies
+#Buko technologies
+Simplifying the world
