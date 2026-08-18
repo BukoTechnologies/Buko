@@ -1,2 +1,1 @@
-#Buko technologies
-Simplifying the world
+Website for Buko Technologies
