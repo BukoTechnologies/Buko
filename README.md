@@ -5,29 +5,37 @@ served from this repo via GitHub Pages (see `CNAME`).
 
 ## The product: SteelCurtain
 
-**Don't lose the deal to a security questionnaire.**
+**Configured isn't the same as enforced.**
 
 When a small company lands an enterprise customer, procurement sends a security
-assessment before the contract can be signed — often hundreds of questions about
-access control, encryption, incident response. The deal stops moving while
-someone answers it from memory over a weekend, and some of those answers end up
-more optimistic than true.
+assessment before the contract can be signed. The deal stops moving while someone
+answers hundreds of questions from memory over a weekend, and some of those answers
+end up more optimistic than true.
 
-SteelCurtain does three things:
+Every tool in this category verifies by reading a setting. Anyone who has actually
+attacked these environments knows how little that proves — "MFA is enabled" and
+"MFA cannot be bypassed" are different sentences, separated by an excluded group, a
+legacy protocol, or a service principal nobody has looked at since setup.
 
-1. **Answers the questionnaire.** Connects to the accounts a business already
-   uses and maps each question to what's actually configured, so every claim is
-   backed by evidence rather than recollection.
-2. **Fixes the gaps.** Most of what these forms ask about — MFA, password
-   policy, phishing protection — is already included in the tools the customer
-   pays for, just switched off. SteelCurtain turns it on.
-3. **Keeps the answers true and reusable.** Configuration drifts; SteelCurtain
-   watches what was attested to and flags it when it stops being accurate. The
-   same record answers the next review and the annual cyber insurance renewal.
+SteelCurtain verifies controls three ways:
 
-**Target:** small and medium businesses that sell to enterprises, plus anyone
-facing a cyber insurance renewal. The wedge is the blocked deal — an urgent,
-dated, expensive problem. The security remediation is the fulfillment.
+| Tier | Method | Who else does this |
+|------|--------|--------------------|
+| 1. Config read | Query the API, read the setting | Everyone. Table stakes. |
+| 2. Reachability | Solve the whole policy set for bypass paths | Nobody, at this market size |
+| 3. Active probe | Safely attempt the bypass against a consented canary account, record the result | Nobody |
+
+That verified state then drives everything else: questionnaire answers with evidence
+attached, a prioritised list of real gaps, and continuous re-verification so you're
+told the day a claim you signed your name to stops being true.
+
+**Target:** small and medium businesses that sell to enterprises. The wedge is the
+blocked deal — urgent, dated, expensive. Verification is the differentiator, and
+continuous re-verification is what makes it a subscription rather than a one-off
+transaction.
+
+**Scope, deliberately narrow.** Microsoft 365 / Entra ID only. Not an EDR, not a SIEM,
+not backup, not incident response, not a pentest, not a SOC 2 audit.
 
 Status: pre-launch. The site collects early-access interest.
 

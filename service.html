@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <meta name="description" content="How SteelCurtain works: map a security questionnaire to your real configuration, fix the gaps, keep the answers true, and reuse them for the next review or insurance renewal." />
-  <meta name="keywords" content="security questionnaire, vendor security review, security assessment, SOC 2 alternative, cyber insurance questionnaire, MFA, small business security, SteelCurtain, Buko Technologies" />
+  <meta name="description" content="How SteelCurtain works: verify controls three ways, map a security questionnaire to verified facts, close the gaps, and keep the answers true as configuration drifts." />
+  <meta name="keywords" content="security questionnaire, vendor security review, security assessment, continuous control verification, conditional access, MFA enforcement, SteelCurtain, Buko Technologies" />
   <meta name="author" content="Buko Technologies" />
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -89,15 +89,15 @@
 
   </div>
 
-  <!-- what it does -->
+  <!-- how we check -->
   <section class="service_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>How SteelCurtain works</h2>
+        <h2>Configured isn&rsquo;t the same as enforced</h2>
         <p style="max-width: 44em; margin-top: 14px;">
           A security review is really two problems wearing one hat: working out what&rsquo;s
-          true today, and fixing the parts you&rsquo;d rather not admit to. SteelCurtain
-          does both, in that order.
+          genuinely true today, and fixing the parts you&rsquo;d rather not admit to.
+          SteelCurtain does both &mdash; starting with the part almost nobody does properly.
         </p>
       </div>
       <div class="row">
@@ -105,7 +105,6 @@
         <div class="col-md-6 col-lg-3">
           <div class="box">
             <div class="img-box">
-              <!-- checklist -->
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <rect x="4" y="2.8" width="16" height="18.4" rx="3" />
                 <path d="M8.2 8.4l1.5 1.5 2.8-2.9" />
@@ -116,7 +115,12 @@
             </div>
             <div class="detail-box">
               <h6>Answer it honestly</h6>
-              <p>Forward us the form and connect your accounts. SteelCurtain reads each question and checks it against your real configuration, so you get a line-by-line readout instead of a blank document and a bad feeling. No more answering a 200-question assessment from memory on a Sunday.</p>
+              <p>
+                Forward us the form &mdash; whatever shape it arrived in &mdash; and connect
+                your accounts. Every question gets mapped to something we have actually
+                checked, so you get a line-by-line readout instead of a blank document and
+                a bad feeling. Each answer carries its evidence and the date we confirmed it.
+              </p>
             </div>
           </div>
         </div>
@@ -124,16 +128,20 @@
         <div class="col-md-6 col-lg-3">
           <div class="box">
             <div class="img-box">
-              <!-- lock -->
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="4" y="10.5" width="16" height="10.5" rx="3" />
-                <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
-                <circle cx="12" cy="15.5" r="1.4" />
+                <circle cx="10.6" cy="10.6" r="7.1" />
+                <path d="M15.8 15.8L21 21" />
+                <path d="M7.6 10.6l2.2 2.2 3.9-4.1" />
               </svg>
             </div>
             <div class="detail-box">
-              <h6>Fix what&rsquo;s red</h6>
-              <p>Most of what these forms ask about is already sitting in the tools you pay for, switched off. We turn it on: multi-factor auth across every account, password rules people can live with, phishing filtering that catches the convincing fakes. You approve, we do the work.</p>
+              <h6>Check what actually holds</h6>
+              <p>
+                Reading a setting tells you what someone intended. We work out what an
+                attacker would find: which identities can still reach what, which policies
+                cancel each other out, which old protocol is quietly still answering. Three
+                escalating levels of proof, described below.
+              </p>
             </div>
           </div>
         </div>
@@ -141,7 +149,26 @@
         <div class="col-md-6 col-lg-3">
           <div class="box">
             <div class="img-box">
-              <!-- bell -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3.4 20.6h4.2l10.1-10.1a3 3 0 0 0-4.2-4.2L3.4 16.4z" />
+                <path d="M13.3 7.1l3.6 3.6" />
+              </svg>
+            </div>
+            <div class="detail-box">
+              <h6>Close the gaps</h6>
+              <p>
+                Everything we find comes back as a prioritised list in plain English: what
+                is actually broken, what it would take to fix, and whether it is worth your
+                afternoon. Most of it turns out to be already sitting in the tools you pay
+                for every month, switched off.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M18 8.8a6 6 0 1 0-12 0c0 5.4-2 7-2 7h16s-2-1.6-2-7" />
                 <path d="M13.7 19.5a2 2 0 0 1-3.4 0" />
@@ -149,24 +176,12 @@
             </div>
             <div class="detail-box">
               <h6>Keep it true</h6>
-              <p>An honest answer has a shelf life. Someone disables MFA to fix a login problem and forgets to re-enable it; an admin account outlives the admin. SteelCurtain keeps watching the specific things you claimed, and tells you when one drifts &mdash; before the next audit finds it.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
-              <!-- export -->
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M20 15.5v3.2a2.3 2.3 0 0 1-2.3 2.3H6.3A2.3 2.3 0 0 1 4 18.7v-3.2" />
-                <path d="M12 15.2V3.4" />
-                <path d="M7.8 7.6L12 3.4l4.2 4.2" />
-              </svg>
-            </div>
-            <div class="detail-box">
-              <h6>Reuse it forever</h6>
-              <p>Answer it once, keep it forever. Every claim is stored with evidence and a date, so the next questionnaire is mostly pre-filled, and your insurance renewal stops being a two-hour guessing game. Export as a PDF for whoever&rsquo;s asking this time.</p>
+              <p>
+                An honest answer has a shelf life. Policies get loosened to fix a login
+                problem; admin accounts outlive the admin. We keep re-checking every claim
+                you signed your name to and tell you the day one stops being accurate &mdash;
+                so the next form starts at mostly-done instead of blank.
+              </p>
             </div>
           </div>
         </div>
@@ -174,75 +189,88 @@
       </div>
     </div>
   </section>
-  <!-- end what it does -->
+  <!-- end how we check -->
 
-  <!-- steps -->
+  <!-- three tiers -->
   <section class="steps_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>Getting started</h2>
+        <h2>Three ways we check</h2>
+        <p style="max-width: 42em; margin-top: 14px;">
+          Each one is harder evidence than the last. Most tools stop at the first.
+        </p>
       </div>
       <div class="row" style="margin-top: 45px;">
         <div class="col-md-4">
           <div class="box">
             <div class="step_num">1</div>
-            <h5>Send us the form</h5>
+            <h5>Read the setting</h5>
             <p>
-              Forward the questionnaire &mdash; whatever format it arrived in &mdash; and
-              connect the accounts you already use. One sign-in, a couple of clicks,
-              no migration project and nothing to install on anyone&rsquo;s laptop.
+              Query the configuration and see what it says. Is the policy on, is the
+              box ticked, is the feature licensed. This is necessary, it is cheap, and
+              it is where every other tool in this category stops &mdash; which is why
+              so many confident questionnaire answers are wrong.
             </p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="box">
-            <div class="step_num">2</div>
-            <h5>See where you stand</h5>
+            <div class="step_num tier_deep">2</div>
+            <h5>Look for the way around</h5>
             <p>
-              A line-by-line readout in plain English. Every question marked as
-              answerable or not, with the evidence behind it, plus an honest view of
-              which gaps are worth your time and which are box-ticking.
+              Access policies form a system, and systems have gaps that no individual
+              rule reveals. We take the whole policy set and work out whether <em>any</em>
+              identity, in any situation, still reaches what it shouldn&rsquo;t &mdash;
+              the excluded group, the trusted location, the legacy protocol, the service
+              principal nobody has looked at since setup.
             </p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="box">
-            <div class="step_num">3</div>
-            <h5>Get the deal moving</h5>
+            <div class="step_num tier_probe">3</div>
+            <h5>Actually try it</h5>
             <p>
-              Approve the fixes, export the completed answers, and send them back
-              with a straight face. The file stays current, so the next review starts
-              at mostly-done instead of blank.
+              The strongest evidence there is. With your explicit permission, on a
+              schedule you pick, we attempt the bypass ourselves against an account we
+              created for the purpose &mdash; and record exactly what happened. Never
+              against your staff, never anything destructive. Just a timestamped answer
+              nobody can wave away.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- end steps -->
+  <!-- end three tiers -->
 
-  <!-- insurance -->
+  <!-- what it isn't -->
   <section class="panel_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <div class="panel">
             <div class="heading_container">
-              <h2>Your insurer asks the same questions</h2>
+              <h2>What SteelCurtain isn&rsquo;t</h2>
             </div>
             <p style="margin-top: 20px;">
-              A cyber cover renewal runs on the same handful of facts as an
-              enterprise security review &mdash; is MFA on everywhere, who still has
-              admin, what happens when someone leaves. Once SteelCurtain knows the
-              answers, the renewal form is a two-minute job instead of a two-hour
-              guess, and you&rsquo;re attesting to things that are actually true.
+              Security vendors have a habit of implying they cover everything. Here is
+              a straight list of what we don&rsquo;t do, so nobody finds out the
+              awkward way:
             </p>
-            <ul>
-              <li>One record of what&rsquo;s switched on, and since when</li>
-              <li>Plain-English answers you can hand to a broker or a procurement team</li>
-              <li>A running list of what&rsquo;s still worth fixing &mdash; and what it&rsquo;s worth</li>
-              <li>Exportable as a PDF for whoever&rsquo;s asking this time</li>
+            <ul class="not_list">
+              <li>Not antivirus, not endpoint detection &mdash; nothing gets installed on anyone&rsquo;s laptop</li>
+              <li>Not a SIEM, and not a 24/7 monitoring service with people watching screens</li>
+              <li>Not backup, disaster recovery, or incident response</li>
+              <li>Not a penetration test, and not a substitute for one</li>
+              <li>Not a SOC 2 audit &mdash; we&rsquo;ll help you answer the questions, but we&rsquo;re not your auditor</li>
             </ul>
+            <p style="margin-top: 22px;">
+              What we do is narrow on purpose: know what&rsquo;s genuinely true about
+              your security, prove it, and keep it that way. The same record answers
+              your next customer&rsquo;s review &mdash; and your insurance renewal, which
+              asks most of the same things.
+            </p>
             <div class="btn-box" style="margin-top: 30px;">
               <a href="contact.html">Get early access</a>
             </div>
@@ -251,7 +279,7 @@
       </div>
     </div>
   </section>
-  <!-- end insurance -->
+  <!-- end what it isn't -->
   <!-- footer info -->
   <section class="info_section">
     <div class="container">

@@ -323,6 +323,16 @@ a:hover { color: var(--buko-rose-dark); text-decoration: none; }
   font-weight: 700;
 }
 
+/* Variant for "what this isn't" lists — a muted cross instead of a check. */
+.panel_section ul.not_list li::before {
+  content: "\f00d";                 /* Font Awesome times */
+  color: var(--buko-ink-soft);
+}
+
+/* Tier badge on the verification steps — same circle, different palette. */
+.steps_section .step_num.tier_deep  { background-color: var(--buko-rose); }
+.steps_section .step_num.tier_probe { background-color: var(--buko-coconut); }
+
 
 /* ==========================================================================
    CONTACT
