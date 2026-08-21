@@ -294,26 +294,26 @@ a:hover { color: var(--buko-rose-dark); text-decoration: none; }
 
 
 /* ==========================================================================
-   INSURANCE HIGHLIGHT  (reuses the old team slot)
+   HIGHLIGHT PANEL  (reuses the old team slot)
    ========================================================================== */
 
-.insurance_section {
+.panel_section {
   background: linear-gradient(135deg, var(--buko-pink-soft) 0%, #fff3e6 100%);
 }
-.insurance_section .panel {
+.panel_section .panel {
   background-color: var(--buko-white);
   border-radius: var(--buko-radius);
   box-shadow: var(--buko-shadow);
   padding: 48px 44px;
 }
-.insurance_section ul { list-style: none; padding: 0; margin: 22px 0 0; }
-.insurance_section ul li {
+.panel_section ul { list-style: none; padding: 0; margin: 22px 0 0; }
+.panel_section ul li {
   position: relative;
   padding-left: 34px;
   margin-bottom: 14px;
   color: var(--buko-ink-soft);
 }
-.insurance_section ul li::before {
+.panel_section ul li::before {
   content: "\f00c";                 /* Font Awesome check */
   font-family: FontAwesome;
   position: absolute;
@@ -412,5 +412,5 @@ a:hover { color: var(--buko-rose-dark); text-decoration: none; }
   .slider_section .detail-box h1 { font-size: 2rem; }
   .layout_padding { padding-top: 64px; padding-bottom: 64px; }
   .heading_container h2 { font-size: 1.9rem; }
-  .insurance_section .panel { padding: 32px 24px; }
+  .panel_section .panel { padding: 32px 24px; }
 }
