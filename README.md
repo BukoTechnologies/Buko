@@ -3,7 +3,7 @@
 Marketing site for [Buko Technologies](https://www.bukotechnologies.com) —
 served from this repo via GitHub Pages (see `CNAME`).
 
-## The product: SteelCurtain
+## The product: Winnow
 
 **Present isn't the same as exploitable.**
 
@@ -18,7 +18,7 @@ An SBOM with 400 CVEs usually contains about six that anyone could actually reac
 rest were compiled out, are never called, or need an interface the device doesn't expose.
 Today that gets defended by hand, in email, every single time.
 
-SteelCurtain verifies three ways:
+Winnow verifies three ways:
 
 | Tier | Method | Who else does this |
 |------|--------|--------------------|
@@ -35,7 +35,7 @@ the pain is worse, deal sizes are larger, and the compliance platforms (Vanta, D
 don't serve it — they do *company* compliance, not *product* assurance.
 
 **Why it's a subscription, not a transaction:** for a product, every release changes the
-SBOM and the CVE picture. Answers go stale on their own. SteelCurtain runs from the build
+SBOM and the CVE picture. Answers go stale on their own. Winnow runs from the build
 pipeline, so re-verification is structural rather than a feature to argue for.
 
 **Tailwind:** the EU Cyber Resilience Act and sector rules (medical, automotive) mandate
