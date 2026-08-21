@@ -329,6 +329,29 @@ a:hover { color: var(--buko-rose-dark); text-decoration: none; }
   color: var(--buko-ink-soft);
 }
 
+/* Neutral list marker — for items that are neither wins nor exclusions. */
+.panel_section ul.plain_list li::before {
+  content: "\f105";                 /* Font Awesome angle-right */
+  color: var(--buko-rose);
+  left: 4px;
+}
+
+/* Two panels side by side need less padding than one full-width panel. */
+.panel_section .row .col-md-6 .panel { padding: 34px 30px; height: 100%; }
+.panel_section .panel h5 { font-size: 1.3rem; margin-bottom: 4px; }
+.panel_section .panel .tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: var(--buko-radius-pill);
+  margin-bottom: 14px;
+}
+.panel_section .panel .tag.tag_verified { background: var(--buko-green); color: #fff; }
+.panel_section .panel .tag.tag_asserted { background: var(--buko-sand); color: var(--buko-ink); }
+
 /* Tier badge on the verification steps — same circle, different palette. */
 .steps_section .step_num.tier_deep  { background-color: var(--buko-rose); }
 .steps_section .step_num.tier_probe { background-color: var(--buko-coconut); }
