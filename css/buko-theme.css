@@ -1,0 +1,416 @@
+/* ==========================================================================
+   BUKO THEME  —  buko-theme.css
+   --------------------------------------------------------------------------
+   This is the ONLY file you need to touch to restyle the whole site.
+
+   It loads AFTER css/style.css and overrides the old template's colors,
+   shapes and spacing. The template's own files are left alone, so if you ever
+   want the original look back, just remove the <link> to this file.
+
+   ► TO REBRAND: change the values in the :root block below. Nothing else.
+   ========================================================================== */
+
+:root {
+  /* ---- BRAND COLORS (straight off the logo) ---------------------------- */
+  --buko-pink:      #fba4b4;   /* logo background pink — hero + soft blocks  */
+  --buko-pink-soft: #ffe6ea;   /* very light pink — section backgrounds      */
+  --buko-rose:      #e05570;   /* deeper pink — primary buttons, links       */
+  --buko-rose-dark: #c33f59;   /* hover state for the above                  */
+  --buko-green:     #2e9e4f;   /* palm-leaf green — secondary buttons, icons */
+  --buko-green-lt:  #7bc950;   /* lighter palm green — accents               */
+  --buko-sand:      #f5dfb0;   /* the sand under the palm tree               */
+  --buko-coconut:   #8b5e3c;   /* coconut brown — rarely used, here if wanted*/
+
+  /* ---- NEUTRALS -------------------------------------------------------- */
+  --buko-ink:       #22252b;   /* headings + body text                       */
+  --buko-ink-soft:  #5c6270;   /* paragraph text, less contrast              */
+  --buko-cream:     #fffaf8;   /* page background — warm, not stark white    */
+  --buko-white:     #ffffff;
+  --buko-footer-bg: #2b2230;   /* footer / info bar — warm dark, not black   */
+
+  /* ---- SHAPE & DEPTH --------------------------------------------------- */
+  --buko-radius:      20px;    /* corner rounding on cards                   */
+  --buko-radius-pill: 999px;   /* buttons are fully rounded pills            */
+  --buko-shadow:      0 10px 30px rgba(224, 85, 112, 0.10);
+  --buko-shadow-lift: 0 18px 40px rgba(224, 85, 112, 0.18);
+
+  /* ---- TYPE ------------------------------------------------------------ */
+  --buko-font:      'Nunito', 'Poppins', -apple-system, sans-serif;
+  --buko-font-head: 'Nunito', 'Poppins', -apple-system, sans-serif;
+
+  /* ---- HERO BACKGROUND ------------------------------------------------- */
+  /* Replaces the old stock photo of a security guard. Swap for a real image
+     with:  --buko-hero-bg: url('../images/your-photo.jpg') center/cover;    */
+  --buko-hero-bg: linear-gradient(135deg, #fbc2cc 0%, var(--buko-pink) 45%, #f98da4 100%);
+
+  /* Contact block sits just below a pink section, so it leans green instead
+     to break things up. Same deal — swap in url(...) for a photo.            */
+  --buko-contact-bg: linear-gradient(135deg, #3fb768 0%, var(--buko-green) 55%, #1f7a3c 100%);
+}
+
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+body {
+  font-family: var(--buko-font);
+  color: var(--buko-ink);
+  background-color: var(--buko-cream);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--buko-font-head);
+  color: var(--buko-ink);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+p { color: var(--buko-ink-soft); }
+
+a { color: var(--buko-rose); }
+a:hover { color: var(--buko-rose-dark); text-decoration: none; }
+
+/* The template SHOUTED IN CAPS everywhere. Friendlier in sentence case. */
+.heading_container h2,
+.service_section .detail-box h6,
+.slider_section .detail-box h1,
+.about_section .detail-box a,
+.service_section .detail-box a {
+  text-transform: none !important;
+}
+
+/* Section headings: the little dash underneath becomes a soft pink pill */
+.heading_container h2 {
+  font-size: 2.4rem;
+  padding-bottom: 18px;
+}
+.heading_container h2::before {
+  background-color: var(--buko-rose);
+  height: 6px;
+  width: 56px;
+}
+
+.layout_padding { padding-top: 100px; padding-bottom: 100px; }
+
+
+/* ==========================================================================
+   BUTTONS  — all pills, all friendly
+   ========================================================================== */
+
+.slider_section .detail-box .btn-1,
+.slider_section .detail-box .btn-2,
+.about_section .detail-box a,
+.service_section .detail-box a,
+.contact_section button,
+.info_form button,
+.btn-box > a {
+  border-radius: var(--buko-radius-pill) !important;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 2px solid transparent;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+/* Primary action — deep rose */
+.slider_section .detail-box .btn-2,
+.about_section .detail-box a,
+.contact_section button,
+.info_form button,
+.btn-box > a {
+  background-color: var(--buko-rose) !important;
+  color: var(--buko-white) !important;
+  box-shadow: var(--buko-shadow);
+}
+.slider_section .detail-box .btn-2:hover,
+.about_section .detail-box a:hover,
+.contact_section button:hover,
+.info_form button:hover,
+.btn-box > a:hover {
+  background-color: var(--buko-rose-dark) !important;
+  color: var(--buko-white) !important;
+  border-color: transparent !important;
+  transform: translateY(-2px);
+  box-shadow: var(--buko-shadow-lift);
+}
+
+/* Secondary action — white pill on the pink hero */
+.slider_section .detail-box .btn-1 {
+  background-color: var(--buko-white) !important;
+  color: var(--buko-rose) !important;
+  box-shadow: var(--buko-shadow);
+}
+.slider_section .detail-box .btn-1:hover {
+  background-color: var(--buko-ink) !important;
+  color: var(--buko-white) !important;
+  border-color: transparent !important;
+  transform: translateY(-2px);
+}
+
+/* Service card buttons — palm green */
+.service_section .detail-box a {
+  background-color: var(--buko-green) !important;
+  color: var(--buko-white) !important;
+}
+.service_section .detail-box a:hover {
+  background-color: #24803e !important;
+  color: var(--buko-white) !important;
+  border-color: transparent !important;
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+/* Top contact strip: was charcoal, now warm dark */
+.header_top {
+  background-color: var(--buko-footer-bg);
+  padding: 12px 0;
+}
+.header_top .contact_link-container a { font-size: 15px; }
+.header_top .contact_link-container a i { color: var(--buko-pink); }
+
+/* Hero: stock guard photo out, tropical gradient in */
+.hero_bg_box { background: var(--buko-hero-bg); }
+
+.hero_area { height: auto; min-height: 92vh; }
+
+.custom_nav-container .navbar-brand span {
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+
+.custom_nav-container .nav-item .nav-link {
+  font-weight: 600;
+  padding: 6px 18px !important;
+  border-radius: var(--buko-radius-pill);
+  transition: all 0.2s ease;
+}
+.custom_nav-container .nav-item .nav-link:hover,
+.custom_nav-container .nav-item.active .nav-link {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: var(--buko-white);
+}
+
+/* Hero headline */
+.slider_section .detail-box h1 {
+  font-size: 3.4rem;
+  line-height: 1.12;
+  font-weight: 800;
+  color: var(--buko-white);
+  text-shadow: 0 2px 18px rgba(150, 40, 60, 0.22);
+}
+.slider_section .detail-box h1 span { color: var(--buko-ink); }
+.slider_section .detail-box p {
+  color: var(--buko-white);
+  font-size: 1.15rem;
+  max-width: 34em;
+  text-shadow: 0 1px 10px rgba(150, 40, 60, 0.20);
+}
+
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+
+.about_section .img_container .img-box img { border-radius: var(--buko-radius); }
+.about_section .detail-box {
+  border-radius: var(--buko-radius);
+  box-shadow: var(--buko-shadow);
+  padding: 45px 40px;
+}
+
+
+/* ==========================================================================
+   SERVICES  ("What SteelCurtain covers")
+   ========================================================================== */
+
+/* Was charcoal. Now a soft pink wash so the white cards pop. */
+.service_section { background-color: var(--buko-pink-soft); }
+.service_section .heading_container { color: var(--buko-ink); }
+.service_section .heading_container h2 { color: var(--buko-ink); }
+
+.service_section .box {
+  border-radius: var(--buko-radius);
+  box-shadow: var(--buko-shadow);
+  padding: 38px 26px;
+  height: calc(100% - 30px);
+  margin-top: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service_section .box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--buko-shadow-lift);
+}
+.service_section .box .img-box svg {
+  width: 62px;
+  height: 62px;
+  fill: none;
+  stroke: var(--buko-rose);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.service_section .box .detail-box h6 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+
+/* ==========================================================================
+   STEPS  ("How it works" — reuses the old testimonial slot)
+   ========================================================================== */
+
+.steps_section { background-color: var(--buko-cream); }
+
+.steps_section .box {
+  background-color: var(--buko-white);
+  border-radius: var(--buko-radius);
+  box-shadow: var(--buko-shadow);
+  padding: 38px 28px;
+  height: 100%;
+  text-align: center;
+}
+.steps_section .step_num {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--buko-green);
+  color: var(--buko-white);
+  font-weight: 800;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.steps_section h5 { font-size: 1.15rem; margin-bottom: 10px; }
+
+
+/* ==========================================================================
+   INSURANCE HIGHLIGHT  (reuses the old team slot)
+   ========================================================================== */
+
+.insurance_section {
+  background: linear-gradient(135deg, var(--buko-pink-soft) 0%, #fff3e6 100%);
+}
+.insurance_section .panel {
+  background-color: var(--buko-white);
+  border-radius: var(--buko-radius);
+  box-shadow: var(--buko-shadow);
+  padding: 48px 44px;
+}
+.insurance_section ul { list-style: none; padding: 0; margin: 22px 0 0; }
+.insurance_section ul li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 14px;
+  color: var(--buko-ink-soft);
+}
+.insurance_section ul li::before {
+  content: "\f00c";                 /* Font Awesome check */
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--buko-green);
+  font-weight: 700;
+}
+
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+/* Old background was a dark stock photo. Now a palm-green gradient. */
+.contact_section .contact_bg_box { background: var(--buko-contact-bg); }
+
+.contact_section .heading_container h2 { color: var(--buko-white); }
+.contact_section .heading_container h2::before { background-color: var(--buko-white); }
+
+.contact_section .contact_form-container input {
+  border-radius: var(--buko-radius-pill);
+  border: none;
+  padding: 14px 24px;
+  margin-bottom: 14px;
+  width: 100%;
+  background-color: var(--buko-white);
+  color: var(--buko-ink);
+}
+.contact_section .contact_form-container input::placeholder { color: #9aa0ac; }
+.contact_section .contact_form-container input:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.65);
+}
+.contact_section .contact_form-container .message_input {
+  border-radius: var(--buko-radius);
+  padding-bottom: 70px;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.info_section { background-color: var(--buko-footer-bg); }
+.info_section .info_logo .navbar-brand span { font-size: 24px; }
+.info_section h5 { color: var(--buko-white); font-weight: 800; }
+.info_section p,
+.info_section .info_links ul li a,
+.info_section .info_contact a span { color: rgba(255, 255, 255, 0.78); }
+.info_section .info_links ul li a:hover,
+.info_section .info_contact a:hover span { color: var(--buko-pink); }
+.info_section .info_contact a i { color: var(--buko-pink); }
+
+.info_section .info_form input {
+  border-radius: var(--buko-radius-pill);
+  border: none;
+  padding: 11px 20px;
+  color: var(--buko-ink);
+  background-color: var(--buko-white);
+}
+.info_section .social_box a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  color: var(--buko-white);
+  transition: all 0.2s ease;
+}
+.info_section .social_box a:hover {
+  background-color: var(--buko-pink);
+  color: var(--buko-ink);
+  transform: translateY(-2px);
+}
+
+.footer_section { background-color: var(--buko-footer-bg); }
+.footer_section p { color: rgba(255, 255, 255, 0.6); }
+.footer_section p a { color: var(--buko-pink); }
+
+
+/* ==========================================================================
+   SMALL SCREENS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .custom_nav-container .nav-item .nav-link { padding: 8px 14px !important; }
+  .slider_section .detail-box h1 { font-size: 2.4rem; }
+  .about_section .detail-box { margin-left: 0; margin-top: 24px; }
+}
+
+@media (max-width: 576px) {
+  .header_top .contact_link-container { flex-direction: column; gap: 6px; }
+  .slider_section .detail-box h1 { font-size: 2rem; }
+  .layout_padding { padding-top: 64px; padding-bottom: 64px; }
+  .heading_container h2 { font-size: 1.9rem; }
+  .insurance_section .panel { padding: 32px 24px; }
+}
