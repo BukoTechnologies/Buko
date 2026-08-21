@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <meta name="description" content="How SteelCurtain works: verify controls three ways, map a security questionnaire to verified facts, close the gaps, and keep the answers true as configuration drifts." />
-  <meta name="keywords" content="security questionnaire, vendor security review, security assessment, continuous control verification, conditional access, MFA enforcement, SteelCurtain, Buko Technologies" />
+  <meta name="description" content="How SteelCurtain works: parse your SBOM and build, prove which CVEs are actually reachable, generate defensible VEX, and re-verify from your pipeline every release." />
+  <meta name="keywords" content="product security questionnaire, vendor security review, SBOM, VEX, CVE reachability, connected product security, IoT security assurance, Cyber Resilience Act, SteelCurtain, Buko Technologies" />
   <meta name="author" content="Buko Technologies" />
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -89,15 +89,16 @@
 
   </div>
 
-  <!-- how we check -->
+  <!-- how it works -->
   <section class="service_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>Configured isn&rsquo;t the same as enforced</h2>
+        <h2>Present isn&rsquo;t the same as exploitable</h2>
         <p style="max-width: 44em; margin-top: 14px;">
-          A security review is really two problems wearing one hat: working out what&rsquo;s
-          genuinely true today, and fixing the parts you&rsquo;d rather not admit to.
-          SteelCurtain does both &mdash; starting with the part almost nobody does properly.
+          A product security review is two problems wearing one hat: working out what is
+          genuinely true about the thing you ship, and proving it to somebody who has every
+          reason to be sceptical. SteelCurtain does both &mdash; starting with the part
+          almost nobody does properly.
         </p>
       </div>
       <div class="row">
@@ -116,10 +117,10 @@
             <div class="detail-box">
               <h6>Answer it honestly</h6>
               <p>
-                Forward us the form &mdash; whatever shape it arrived in &mdash; and connect
-                your accounts. Every question gets mapped to something we have actually
-                checked, so you get a line-by-line readout instead of a blank document and
-                a bad feeling. Each answer carries its evidence and the date we confirmed it.
+                Send us the questionnaire in whatever shape it arrived and point us at your
+                build. Every question gets mapped to something we have actually verified, so
+                you get a line-by-line readout instead of a blank document and a lost week.
+                Each answer carries its evidence and the release it was confirmed against.
               </p>
             </div>
           </div>
@@ -135,12 +136,12 @@
               </svg>
             </div>
             <div class="detail-box">
-              <h6>Check what actually holds</h6>
+              <h6>Prove what&rsquo;s exploitable</h6>
               <p>
-                Reading a setting tells you what someone intended. We work out what an
-                attacker would find: which identities can still reach what, which policies
-                cancel each other out, which old protocol is quietly still answering. Three
-                escalating levels of proof, described below.
+                The core of it. We take your SBOM, match it against known vulnerabilities,
+                then do the part everyone skips: work out which of those are genuinely
+                reachable in the artefact you ship. The output is a VEX document your
+                customer&rsquo;s security team can verify rather than take on faith.
               </p>
             </div>
           </div>
@@ -155,12 +156,12 @@
               </svg>
             </div>
             <div class="detail-box">
-              <h6>Close the gaps</h6>
+              <h6>Close the real gaps</h6>
               <p>
-                Everything we find comes back as a prioritised list in plain English: what
-                is actually broken, what it would take to fix, and whether it is worth your
-                afternoon. Most of it turns out to be already sitting in the tools you pay
-                for every month, switched off.
+                Whatever survives the reachability pass is a genuine finding, and those come
+                back ranked by exposure rather than by CVSS score. A handful of things worth
+                an afternoon, instead of four hundred rows that make everyone give up and
+                start hand-waving.
               </p>
             </div>
           </div>
@@ -170,17 +171,18 @@
           <div class="box">
             <div class="img-box">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M18 8.8a6 6 0 1 0-12 0c0 5.4-2 7-2 7h16s-2-1.6-2-7" />
-                <path d="M13.7 19.5a2 2 0 0 1-3.4 0" />
+                <path d="M3.2 7.4L12 3l8.8 4.4v9.2L12 21l-8.8-4.4z" />
+                <path d="M3.2 7.4L12 11.8l8.8-4.4" />
+                <path d="M12 11.8V21" />
               </svg>
             </div>
             <div class="detail-box">
-              <h6>Keep it true</h6>
+              <h6>Keep it true as you ship</h6>
               <p>
-                An honest answer has a shelf life. Policies get loosened to fix a login
-                problem; admin accounts outlive the admin. We keep re-checking every claim
-                you signed your name to and tell you the day one stops being accurate &mdash;
-                so the next form starts at mostly-done instead of blank.
+                For a product, an honest answer has a very short shelf life &mdash; every
+                release changes the SBOM and the CVE picture underneath it. SteelCurtain runs
+                from your pipeline, so the answers move with the build and the next customer
+                gets something current instead of something from four releases ago.
               </p>
             </div>
           </div>
@@ -189,7 +191,7 @@
       </div>
     </div>
   </section>
-  <!-- end how we check -->
+  <!-- end how it works -->
 
   <!-- three tiers -->
   <section class="steps_section layout_padding">
@@ -197,32 +199,33 @@
       <div class="heading_container heading_center">
         <h2>Three ways we check</h2>
         <p style="max-width: 42em; margin-top: 14px;">
-          Each one is harder evidence than the last. Most tools stop at the first.
+          Each is harder evidence than the last.
         </p>
       </div>
       <div class="row" style="margin-top: 45px;">
         <div class="col-md-4">
           <div class="box">
             <div class="step_num">1</div>
-            <h5>Read the setting</h5>
+            <h5>Read the manifest</h5>
             <p>
-              Query the configuration and see what it says. Is the policy on, is the
-              box ticked, is the feature licensed. This is necessary, it is cheap, and
-              it is where every other tool in this category stops &mdash; which is why
-              so many confident questionnaire answers are wrong.
+              Parse the SBOM, the build configuration, the fleet and cloud setup, and see
+              what they claim. Necessary and cheap. It is also the entire depth of most
+              tooling in this space, which is exactly why a scary-looking CVE list gets
+              treated as a scary product.
             </p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="box">
             <div class="step_num tier_deep">2</div>
-            <h5>Look for the way around</h5>
+            <h5>Work out what&rsquo;s reachable</h5>
             <p>
-              Access policies form a system, and systems have gaps that no individual
-              rule reveals. We take the whole policy set and work out whether <em>any</em>
-              identity, in any situation, still reaches what it shouldn&rsquo;t &mdash;
-              the excluded group, the trusted location, the legacy protocol, the service
-              principal nobody has looked at since setup.
+              A component being present in a manifest says almost nothing about whether
+              anyone can get to it. We look at what actually made it into the shipped
+              artefact, whether the vulnerable code sits on a path anything can call, and
+              whether the interface it needs is even exposed on your device. The same
+              question applies to your backend: can one customer&rsquo;s account reach
+              another customer&rsquo;s fleet?
             </p>
           </div>
         </div>
@@ -231,11 +234,11 @@
             <div class="step_num tier_probe">3</div>
             <h5>Actually try it</h5>
             <p>
-              The strongest evidence there is. With your explicit permission, on a
-              schedule you pick, we attempt the bypass ourselves against an account we
-              created for the purpose &mdash; and record exactly what happened. Never
-              against your staff, never anything destructive. Just a timestamped answer
-              nobody can wave away.
+              The strongest evidence there is. With your permission, on hardware and
+              environments you nominate, we attempt the thing rather than reasoning about
+              it &mdash; push an unsigned update and confirm it is refused, capture what the
+              device genuinely transmits, probe the tenant boundary. Timestamped results
+              nobody has to take on trust.
             </p>
           </div>
         </div>
@@ -254,22 +257,21 @@
               <h2>What SteelCurtain isn&rsquo;t</h2>
             </div>
             <p style="margin-top: 20px;">
-              Security vendors have a habit of implying they cover everything. Here is
-              a straight list of what we don&rsquo;t do, so nobody finds out the
-              awkward way:
+              Security vendors have a habit of implying they cover everything. Here is a
+              straight list of what we don&rsquo;t do, so nobody finds out the awkward way:
             </p>
             <ul class="not_list">
-              <li>Not antivirus, not endpoint detection &mdash; nothing gets installed on anyone&rsquo;s laptop</li>
-              <li>Not a SIEM, and not a 24/7 monitoring service with people watching screens</li>
-              <li>Not backup, disaster recovery, or incident response</li>
+              <li>Not a firmware binary analysis platform &mdash; if you already run one, we read its output rather than competing with it</li>
+              <li>Not a SAST or DAST tool, and not a code scanner</li>
               <li>Not a penetration test, and not a substitute for one</li>
-              <li>Not a SOC 2 audit &mdash; we&rsquo;ll help you answer the questions, but we&rsquo;re not your auditor</li>
+              <li>Not an agent that runs on your devices in the field</li>
+              <li>Not a certification body &mdash; we&rsquo;ll help you answer the questions, but we&rsquo;re not your auditor</li>
             </ul>
             <p style="margin-top: 22px;">
-              What we do is narrow on purpose: know what&rsquo;s genuinely true about
-              your security, prove it, and keep it that way. The same record answers
-              your next customer&rsquo;s review &mdash; and your insurance renewal, which
-              asks most of the same things.
+              What we do is narrow on purpose: know what is genuinely true about the product
+              you ship, prove it in a form somebody else can check, and keep it current as
+              you release. The same verified record answers the next customer&rsquo;s review
+              &mdash; and increasingly, the regulators asking the same questions.
             </p>
             <div class="btn-box" style="margin-top: 30px;">
               <a href="contact.html">Get early access</a>

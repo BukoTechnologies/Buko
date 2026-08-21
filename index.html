@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <meta name="description" content="SteelCurtain checks whether your security controls actually hold, not just whether they're switched on, and turns that into questionnaire answers you can defend, with evidence attached." />
-  <meta name="keywords" content="security questionnaire, vendor security review, security assessment, continuous control verification, conditional access, MFA enforcement, SteelCurtain, Buko Technologies" />
+  <meta name="description" content="You ship a connected product. Before it goes on a customer's network their security team wants proof. SteelCurtain verifies what your product actually contains, collects and connects to, and keeps the answers true every release." />
+  <meta name="keywords" content="product security questionnaire, vendor security review, SBOM, VEX, CVE reachability, connected product security, IoT security assurance, Cyber Resilience Act, SteelCurtain, Buko Technologies" />
   <meta name="author" content="Buko Technologies" />
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-  <title>SteelCurtain by Buko Technologies — configured isn&rsquo;t the same as enforced</title>
+  <title>SteelCurtain by Buko Technologies — prove what&rsquo;s in your product, not just what you claim</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -98,11 +98,11 @@
                 <span>security questionnaire.</span>
               </h1>
               <p>
-                Your biggest customer yet sent over a 200-question security review,
-                and the contract stopped moving. SteelCurtain checks whether your
-                controls <em>actually hold</em> &mdash; not just whether they&rsquo;re
-                switched on &mdash; and turns that into answers you can defend, with
-                the evidence attached.
+                You ship a connected product. Before it goes anywhere near their
+                network, your customer&rsquo;s security team wants to know what&rsquo;s
+                inside it, what it collects, and what it talks to. SteelCurtain
+                <em>proves</em> those answers instead of asserting them &mdash; and
+                keeps them true every time you ship.
               </p>
               <div class="btn-box">
                 <a href="contact.html" class="btn-2">Get early access</a>
@@ -134,19 +134,20 @@
               <h2>Sound familiar?</h2>
             </div>
             <p>
-              You just landed the biggest client you&rsquo;ve ever had. Then their
-              procurement team sends a security assessment &mdash; access reviews,
-              encryption at rest, incident response, two hundred questions of it
-              &mdash; and the contract quietly stops moving.
+              The deal is basically done. Then their security team sends the product
+              questionnaire &mdash; data flows, firmware signing, what your cloud can
+              reach inside their network, what happens when you find a vulnerability.
+              Two hundred questions about a <em>machine</em>, not a spreadsheet.
             </p>
             <p>
-              So somebody loses a weekend to it, answering from memory. A few of
-              those answers end up more hopeful than true. And six months later a
-              different customer sends a slightly different version of the same form.
+              So you answer it yourself, because you&rsquo;re the only one who can. It
+              eats a week. You attach an SBOM with four hundred CVEs in it and spend
+              two more days explaining why almost none of them matter.
             </p>
             <p>
-              SteelCurtain ends that weekend &mdash; and makes sure what you send
-              back is something you could actually defend.
+              Then next quarter a different customer sends a different version of the
+              same form &mdash; and your answers are already stale, because you&rsquo;ve
+              shipped six releases since.
             </p>
             <div class="btn-box">
               <a href="about.html">More about us</a>
@@ -164,7 +165,7 @@
       <div class="heading_container heading_center">
         <h2>What SteelCurtain does</h2>
         <p style="max-width: 42em; margin-top: 14px;">
-          Get unblocked. Stay unblocked. That&rsquo;s the whole product.
+          Get the deal unblocked. Stay unblocked as you ship. That&rsquo;s the whole product.
         </p>
       </div>
       <div class="row">
@@ -183,9 +184,9 @@
             <div class="detail-box">
               <h6>Answer it honestly</h6>
               <p>
-                Every question mapped to something we&rsquo;ve actually checked, with
-                the evidence and a timestamp behind it. Export the finished form when
-                you&rsquo;re done.
+                Every question mapped to something we actually checked about your
+                product &mdash; with the evidence, and the exact build it came from,
+                attached.
               </p>
             </div>
           </div>
@@ -201,10 +202,10 @@
               </svg>
             </div>
             <div class="detail-box">
-              <h6>Check what actually holds</h6>
+              <h6>Prove what&rsquo;s exploitable</h6>
               <p>
-                Anyone can read a setting. We look for the way around it &mdash; the
-                exclusion, the legacy protocol, the account nobody remembers.
+                Your SBOM lists hundreds of CVEs. We work out which are genuinely
+                reachable in the code you ship, and produce the VEX to back it up.
               </p>
             </div>
           </div>
@@ -219,11 +220,10 @@
               </svg>
             </div>
             <div class="detail-box">
-              <h6>Close the gaps</h6>
+              <h6>Close the real gaps</h6>
               <p>
-                A prioritised list in plain English &mdash; what&rsquo;s broken, what
-                it&rsquo;s worth fixing, and exactly how. Most of it is already in
-                tools you pay for.
+                What&rsquo;s actually broken, ranked by whether anyone could reach it.
+                A short list you can act on, not a wall of red.
               </p>
             </div>
           </div>
@@ -233,15 +233,16 @@
           <div class="box">
             <div class="img-box">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M18 8.8a6 6 0 1 0-12 0c0 5.4-2 7-2 7h16s-2-1.6-2-7" />
-                <path d="M13.7 19.5a2 2 0 0 1-3.4 0" />
+                <path d="M3.2 7.4L12 3l8.8 4.4v9.2L12 21l-8.8-4.4z" />
+                <path d="M3.2 7.4L12 11.8l8.8-4.4" />
+                <path d="M12 11.8V21" />
               </svg>
             </div>
             <div class="detail-box">
-              <h6>Keep it true</h6>
+              <h6>Keep it true as you ship</h6>
               <p>
-                An honest answer has a shelf life. We keep re-checking every claim you
-                made, and tell you the day one stops being accurate.
+                Every release changes the answer. We re-verify from your build
+                pipeline, so the questionnaire never goes stale between customers.
               </p>
             </div>
           </div>
@@ -258,28 +259,30 @@
       <div class="heading_container heading_center">
         <h2>Three ways we check</h2>
         <p style="max-width: 42em; margin-top: 14px;">
-          Most tools stop at the first one.
+          Each one is harder evidence than the last. Most tools stop at the first.
         </p>
       </div>
       <div class="row" style="margin-top: 45px;">
         <div class="col-md-4">
           <div class="box">
             <div class="step_num">1</div>
-            <h5>Read the setting</h5>
+            <h5>Read the manifest</h5>
             <p>
-              The obvious part: is the policy switched on? Necessary, and nowhere
-              near sufficient. This is where everyone else stops.
+              Parse the SBOM, the build configuration, the cloud and fleet setup.
+              Necessary, cheap, and nowhere near proof &mdash; but it&rsquo;s where
+              almost everything else in this category stops.
             </p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="box">
             <div class="step_num tier_deep">2</div>
-            <h5>Look for the way around</h5>
+            <h5>Work out what&rsquo;s reachable</h5>
             <p>
-              Your access policies interact in ways nobody can hold in their head.
-              We work through the whole set and find the paths that slip past
-              &mdash; the excluded group, the legacy protocol, the service account.
+              Is the vulnerable function actually in the binary you shipped, on a path
+              anything can call? Can one customer&rsquo;s account reach another
+              customer&rsquo;s devices? Presence is not exposure, and the difference
+              is most of your CVE list.
             </p>
           </div>
         </div>
@@ -288,8 +291,9 @@
             <div class="step_num tier_probe">3</div>
             <h5>Actually try it</h5>
             <p>
-              With your say-so, we attempt the bypass ourselves against an account
-              we control, and record what happened. Evidence nobody can argue with.
+              Push an unsigned update and watch it get rejected. Capture what the
+              device really sends, rather than what the design doc says it sends. Test
+              the isolation instead of describing it.
             </p>
           </div>
         </div>
@@ -305,24 +309,26 @@
         <div class="col-lg-10 mx-auto">
           <div class="panel">
             <div class="heading_container">
-              <h2>&ldquo;MFA is enabled&rdquo; and &ldquo;MFA can&rsquo;t be bypassed&rdquo; are different sentences</h2>
+              <h2>Four hundred CVEs, and maybe six that matter</h2>
             </div>
             <p style="margin-top: 20px;">
-              Every questionnaire asks whether you enforce multi-factor authentication.
-              Almost everyone says yes. Plenty of them are wrong, because the console
-              says <em>enabled</em> while something quietly routes around it:
+              Every product security review now asks for an SBOM, and every SBOM comes
+              back looking like a disaster. It almost never is. The vulnerable version
+              is in there, but:
             </p>
             <ul>
-              <li>A policy exclusion added for one contractor in 2023 that nobody removed</li>
-              <li>A legacy protocol still accepting username and password, no second factor required</li>
-              <li>A service account with standing access and no interactive login to prompt on</li>
-              <li>A break-glass account that quietly became somebody&rsquo;s daily driver</li>
-              <li>Someone disabling a policy to fix a login problem at 6pm and never turning it back on</li>
+              <li>The affected component was compiled out of the build you actually ship</li>
+              <li>The vulnerable function exists but nothing in your product ever calls it</li>
+              <li>It&rsquo;s only reachable through an interface your device doesn&rsquo;t expose</li>
+              <li>It needs local access to a machine nobody can log into</li>
+              <li>You already mitigated it somewhere else entirely, and never wrote that down</li>
             </ul>
             <p style="margin-top: 22px;">
-              This is the gap SteelCurtain is built around. Not to catch you out
-              &mdash; to make sure that when you tell a customer yes, it&rsquo;s
-              actually true.
+              Right now you defend all of that by hand, in email, every single time.
+              SteelCurtain works out which CVEs are genuinely reachable and produces a
+              defensible VEX document that says so &mdash; so &ldquo;trust us,
+              it&rsquo;s fine&rdquo; becomes something the customer&rsquo;s security
+              team can actually check.
             </p>
             <div class="btn-box" style="margin-top: 30px;">
               <a href="contact.html">Get early access</a>
