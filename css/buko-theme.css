@@ -136,6 +136,12 @@ a:hover { color: var(--buko-rose-dark); text-decoration: none; }
   box-shadow: var(--buko-shadow-lift);
 }
 
+/* Standalone pill links (e.g. "Join the waitlist" in a panel) need their own padding */
+.btn-box > a {
+  display: inline-block;
+  padding: 12px 32px;
+}
+
 /* Secondary action — white pill on the pink hero */
 .slider_section .detail-box .btn-1 {
   background-color: var(--buko-white) !important;
@@ -205,7 +211,7 @@ a:hover { color: var(--buko-rose-dark); text-decoration: none; }
   color: var(--buko-white);
   text-shadow: 0 2px 18px rgba(150, 40, 60, 0.22);
 }
-.slider_section .detail-box h1 span { color: var(--buko-ink); }
+.slider_section .detail-box h1 span { color: var(--buko-pink); }
 .slider_section .detail-box p {
   color: var(--buko-white);
   font-size: 1.15rem;
