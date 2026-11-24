@@ -30,8 +30,11 @@ Preview locally with `python3 -m http.server`, then open <http://localhost:8000>
 
 ### Outstanding
 
-- The waitlist form posts to `https://formspree.io/f/YOUR_FORM_ID`. Replace `YOUR_FORM_ID` with the ID of your Formspree form, or sign-ups will fail
 - `images/favicon.png` is still the original template's
+
+### Waitlist sign-ups
+
+The waitlist form posts to Formspree form `xrpqrjne`, which emails each sign-up. Manage it at formspree.io.
 
 ### Security note
 
