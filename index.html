@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Husk by Buko Technologies: can your AI agent escape its sandbox?</title>
-  <meta name="description" content="Husk plays the part of a hijacked AI agent and tries every published way out of its sandbox, so you can prove the walls hold. Join the waitlist for early access." />
+  <meta name="description" content="Husk plays the part of a hijacked AI agent and tries the published ways out of its sandbox, so you can prove the walls hold. Join the waitlist for early access." />
   <meta name="author" content="Buko Technologies" />
 
   <link rel="icon" href="images/favicon.png" type="image/png" />
@@ -42,7 +42,7 @@
         <div class="hero-body">
           <div class="hero-copy">
             <p class="lede">
-              Husk plays the part of a hijacked agent and tries every published way
+              Husk plays the part of a hijacked agent and tries the published ways
               out of its sandbox. You get pass or fail for each wall, with proof.
             </p>
             <form class="hero-form" action="https://formspree.io/f/xrpqrjne" method="POST">
@@ -169,14 +169,27 @@
             <p>Start Husk in the same sandbox your agent uses, on your own machine or in your build pipeline.</p>
           </li>
           <li>
-            <h3>It tries every known way out</h3>
-            <p>Each check copies a published escape and tries it directly. No AI model is in the loop, so a pass means the wall held, not that the agent wasn&rsquo;t tempted.</p>
+            <h3>It tries the known ways out</h3>
+            <p>Each check copies a published escape and tries it directly. New checks are added as new escapes are published. No AI model is in the loop, so a pass means the wall held, not that the agent wasn&rsquo;t tempted.</p>
           </li>
           <li>
             <h3>You get proof</h3>
             <p>Pass or fail for every check, with the evidence, in a report you can hand to a customer&rsquo;s security team.</p>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="page">
+        <h2>What Husk does on your machine</h2>
+        <p class="section-intro">You&rsquo;d be running a security tool inside your sandbox, so here&rsquo;s exactly what it&rsquo;s built to do and not do.</p>
+        <ul class="promises">
+          <li><strong>Runs entirely on your machine.</strong> No account needed to run a test, and it works offline.</li>
+          <li><strong>Sends nothing home.</strong> No telemetry. Your results stay on your machine unless you choose to share the report.</li>
+          <li><strong>Uses harmless markers, never your data.</strong> A check proves a wall failed by leaving a marker file or making a test call. It never reads, copies or changes your real keys or files.</li>
+          <li><strong>Every check is readable.</strong> Each one is a short script you can review before you run it.</li>
+        </ul>
       </div>
     </section>
 
@@ -188,6 +201,26 @@
           <li>Teams running their own agent harness that nobody else is testing</li>
           <li>Pen testers who&rsquo;ve been asked to test an agent and need checks that are current</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="page">
+        <h2>Who&rsquo;s building it</h2>
+        <div class="about-body">
+          <p>
+            I&rsquo;m Evan, a security engineer in San Diego. My day job is securing
+            the software at a robotics company, and part of that has been building
+            a secure harness for AI agents, including a token broker so the agent
+            never holds a real credential. Before that I worked on security in
+            banking and aerospace.
+          </p>
+          <p>
+            I keep seeing new ways for an agent&rsquo;s walls to leak, and very
+            little to test them with. Husk is the test I wanted.
+          </p>
+          <p class="creds">M.S. Cybersecurity, Johns Hopkins. CISSP.</p>
+        </div>
       </div>
     </section>
 
