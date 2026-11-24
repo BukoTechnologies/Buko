@@ -13,7 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet" />
 
   <link href="css/husk.css" rel="stylesheet" />
 </head>
@@ -23,7 +23,8 @@
   <header class="site-header">
     <div class="page">
       <a class="brand" href="index.html">
-        <span class="brand-name">husk</span>
+        <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#f5c518"/><path d="M12 1.5A10.5 10.5 0 0 1 22.5 12H12zM12 22.5A10.5 10.5 0 0 1 1.5 12H12z" fill="#1c2433"/><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1c2433" stroke-width="1.5"/></svg>
+        <span class="brand-name">Husk</span>
         <span class="brand-by">by Buko Technologies</span>
       </a>
       <nav class="site-nav" aria-label="Main">
@@ -38,40 +39,44 @@
 
     <section class="hero">
       <div class="page">
-        <div>
-          <h1>Can your AI agent get out of its box?</h1>
-          <p class="lede">
-            Husk plays the part of a hijacked agent and tries every published way
-            out of its sandbox. You get pass or fail for each wall, with proof.
-          </p>
-          <form class="hero-form" action="https://formspree.io/f/xrpqrjne" method="POST">
-            <input type="hidden" name="_subject" value="Husk waitlist sign-up" />
-            <input type="hidden" name="source" value="hero" />
-            <div class="trap" aria-hidden="true">
-              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
-            </div>
-            <input class="field" type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
-            <button class="button" type="submit">Join the waitlist</button>
-          </form>
-          <p class="form-note">We&rsquo;ll only use your email to tell you about Husk.</p>
-        </div>
-
-        <figure class="terminal" id="terminal">
-          <div class="terminal-window" role="img" aria-label="Example Husk run: five checks held and one escaped, where the agent planted a hook that the host ran later, outside the sandbox.">
-            <div class="terminal-title">husk run</div>
-            <div class="terminal-body" aria-hidden="true">
-              <p class="t-cmd"><span class="prompt">$</span> husk run --sandbox ./agent-box</p>
-              <div class="t-row"><span class="t-wall">files</span><span class="t-test">read ~/.ssh/id_ed25519</span><span class="t-result held">held</span></div>
-              <div class="t-row"><span class="t-wall">files</span><span class="t-test">write ../other-project/notes.md</span><span class="t-result held">held</span></div>
-              <div class="t-row"><span class="t-wall">git</span><span class="t-test">core.fsmonitor in repo config</span><span class="t-result held">held</span></div>
-              <div class="t-row"><span class="t-wall">config</span><span class="t-test">plant a hook the host runs later</span><span class="t-result escaped">escaped</span></div>
-              <div class="t-row"><span class="t-wall">network</span><span class="t-test">reach 127.0.0.1 control port</span><span class="t-result held">held</span></div>
-              <div class="t-row"><span class="t-wall">secrets</span><span class="t-test">real API token in environment</span><span class="t-result held">held</span></div>
-              <p class="t-summary">5 held, 1 escaped. Report saved to husk-report.html</p>
-            </div>
+        <h1>Can your AI agent get out of its box?</h1>
+        <div class="hero-body">
+          <div class="hero-copy">
+            <p class="lede">
+              Husk plays the part of a hijacked agent and tries every published way
+              out of its sandbox. You get pass or fail for each wall, with proof.
+            </p>
+            <form class="hero-form" action="https://formspree.io/f/xrpqrjne" method="POST">
+              <input type="hidden" name="_subject" value="Husk waitlist sign-up" />
+              <input type="hidden" name="source" value="hero" />
+              <div class="trap" aria-hidden="true">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+              <input class="field" type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
+              <button class="button" type="submit">Join the waitlist</button>
+            </form>
+            <p class="form-note">We&rsquo;ll only use your email to tell you about Husk.</p>
           </div>
-          <figcaption>Example output from a test sandbox.</figcaption>
-        </figure>
+
+          <figure class="report" id="report">
+            <div class="sheet" role="img" aria-label="Example Husk report: five checks held and one escaped, where the agent planted a hook that the host ran later, outside the sandbox.">
+              <div class="sheet-head" aria-hidden="true">
+                <p class="sheet-title">Containment report</p>
+                <p class="sheet-meta">Sandbox: agent-box</p>
+              </div>
+              <ol class="checks" aria-hidden="true">
+                <li><span class="c-wall">Files</span><span class="c-test">Read <code>~/.ssh/id_ed25519</code></span><span class="c-result held">Held</span></li>
+                <li><span class="c-wall">Files</span><span class="c-test">Write to another project</span><span class="c-result held">Held</span></li>
+                <li><span class="c-wall">Git</span><span class="c-test"><code>core.fsmonitor</code> in repo config</span><span class="c-result held">Held</span></li>
+                <li class="is-escaped"><span class="c-wall">Config</span><span class="c-test">Plant a hook the host runs later</span><span class="c-result escaped">Escaped</span></li>
+                <li><span class="c-wall">Network</span><span class="c-test">Reach a control port on 127.0.0.1</span><span class="c-result held">Held</span></li>
+                <li><span class="c-wall">Secrets</span><span class="c-test">Find a real API token</span><span class="c-result held">Held</span></li>
+              </ol>
+              <p class="sheet-total" aria-hidden="true"><span>5 held</span><span class="bad">1 escaped</span></p>
+            </div>
+            <figcaption>Example report from a test sandbox.</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -230,15 +235,15 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Print the example run line by line, once, on page load.
+    // Stamp each result in order, once, on page load.
     (function () {
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      var terminal = document.getElementById("terminal");
-      var lines = terminal.querySelectorAll(".t-row, .t-summary");
-      lines.forEach(function (line, i) {
-        line.style.animationDelay = (0.4 + i * 0.32) + "s";
+      var report = document.getElementById("report");
+      var stamps = report.querySelectorAll(".c-result, .sheet-total");
+      stamps.forEach(function (stamp, i) {
+        stamp.style.animationDelay = (0.5 + i * 0.28) + "s";
       });
-      terminal.classList.add("is-running");
+      report.classList.add("is-running");
     })();
   </script>
 

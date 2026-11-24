@@ -25,7 +25,7 @@ animation once on load.
 | `css/husk.css` | **All styling.** The palette and fonts are in the `:root` block at the top |
 | `images/favicon.png` | Browser tab icon |
 
-Fonts (Martian Mono and Instrument Sans) load from Google Fonts.
+The font (Archivo, one variable family) loads from Google Fonts. Headlines use its extra-wide cut.
 
 Preview locally with `python3 -m http.server`, then open <http://localhost:8000>.
 
