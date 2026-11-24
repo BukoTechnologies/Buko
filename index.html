@@ -3,394 +3,245 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Husk by Buko Technologies: can your AI agent escape its sandbox?</title>
   <meta name="description" content="Husk plays the part of a hijacked AI agent and tries every published way out of its sandbox, so you can prove the walls hold. Join the waitlist for early access." />
-  <meta name="keywords" content="AI agent security, agent sandbox, sandbox escape, coding agent security, agent harness, Claude Code, Codex, Husk, Buko Technologies" />
   <meta name="author" content="Buko Technologies" />
 
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 
-  <title>Husk by Buko Technologies — can your AI agent escape its sandbox?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- template styles -->
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/responsive.css" rel="stylesheet" />
-
-  <!-- BUKO THEME — loads last so it wins. Edit this file to rebrand. -->
-  <link href="css/buko-theme.css" rel="stylesheet" />
+  <link href="css/husk.css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="hero_area">
 
-    <!-- header -->
-    <div class="hero_bg_box"></div>
+  <header class="site-header">
+    <div class="page">
+      <a class="brand" href="index.html">
+        <span class="brand-name">husk</span>
+        <span class="brand-by">by Buko Technologies</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#checks">What it checks</a>
+        <a href="#how">How it works</a>
+        <a class="button button-small" href="#waitlist">Join the waitlist</a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_link-container">
-            <a href="#" class="contact_link1">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>San Diego &middot; Serving businesses globally</span>
-            </a>
-            <a href="tel:+13523603817" class="contact_link2">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>Call: (352) 360-3817</span>
-            </a>
-            <a href="mailto:hello@bukotechnologies.com" class="contact_link3">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>hello@bukotechnologies.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
+  <main>
 
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html">
-              <span>Buko Technologies</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""></span>
-            </button>
-
-            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#checks">What it checks</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#how">How it works</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#waitlist">Join the waitlist</a>
-                </li>
-              </ul>
+    <section class="hero">
+      <div class="page">
+        <div>
+          <h1>Can your AI agent get out of its box?</h1>
+          <p class="lede">
+            Husk plays the part of a hijacked agent and tries every published way
+            out of its sandbox. You get pass or fail for each wall, with proof.
+          </p>
+          <form class="hero-form" action="https://formspree.io/f/xrpqrjne" method="POST">
+            <input type="hidden" name="_subject" value="Husk waitlist sign-up" />
+            <input type="hidden" name="source" value="hero" />
+            <div class="trap" aria-hidden="true">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
             </div>
-          </nav>
+            <input class="field" type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
+            <button class="button" type="submit">Join the waitlist</button>
+          </form>
+          <p class="form-note">We&rsquo;ll only use your email to tell you about Husk.</p>
         </div>
-      </div>
-    </header>
-    <!-- end header -->
 
-    <!-- hero -->
-    <section class="slider_section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="detail-box">
-              <h1>
-                Can your AI agent<br>
-                <span>get out of its box?</span>
-              </h1>
-              <p>
-                Husk plays the part of a hijacked agent and tries every published way
-                out of its sandbox. You get a plain pass or fail for each wall, with
-                proof, and a new check within days of every new escape.
-              </p>
-              <div class="btn-box">
-                <a href="#waitlist" class="btn-2">Join the waitlist</a>
-                <a href="#checks" class="btn-1">See what it checks</a>
-              </div>
+        <figure class="terminal" id="terminal">
+          <div class="terminal-window" role="img" aria-label="Example Husk run: five checks held and one escaped, where the agent planted a hook that the host ran later, outside the sandbox.">
+            <div class="terminal-title">husk run</div>
+            <div class="terminal-body" aria-hidden="true">
+              <p class="t-cmd"><span class="prompt">$</span> husk run --sandbox ./agent-box</p>
+              <div class="t-row"><span class="t-wall">files</span><span class="t-test">read ~/.ssh/id_ed25519</span><span class="t-result held">held</span></div>
+              <div class="t-row"><span class="t-wall">files</span><span class="t-test">write ../other-project/notes.md</span><span class="t-result held">held</span></div>
+              <div class="t-row"><span class="t-wall">git</span><span class="t-test">core.fsmonitor in repo config</span><span class="t-result held">held</span></div>
+              <div class="t-row"><span class="t-wall">config</span><span class="t-test">plant a hook the host runs later</span><span class="t-result escaped">escaped</span></div>
+              <div class="t-row"><span class="t-wall">network</span><span class="t-test">reach 127.0.0.1 control port</span><span class="t-result held">held</span></div>
+              <div class="t-row"><span class="t-wall">secrets</span><span class="t-test">real API token in environment</span><span class="t-result held">held</span></div>
+              <p class="t-summary">5 held, 1 escaped. Report saved to husk-report.html</p>
             </div>
           </div>
-        </div>
+          <figcaption>Example output from a test sandbox.</figcaption>
+        </figure>
       </div>
     </section>
-    <!-- end hero -->
 
-  </div>
-
-  <!-- why now -->
-  <section class="about_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 px-0">
-          <div class="img_container">
-            <div class="img-box">
-              <img src="images/buko-about.svg" alt="A palm tree beside a coconut wearing a padlock" />
+    <section class="section">
+      <div class="page">
+        <h2>The way out keeps changing</h2>
+        <p class="section-intro">
+          Between July and September 2026, researchers published five separate
+          ways out of popular coding agent sandboxes. Most of them needed no
+          clever prompt.
+        </p>
+        <ol class="escapes">
+          <li>
+            <time datetime="2026-07">Jul 2026</time>
+            <div>
+              <h3><a href="https://www.beri.net/article/ai-coding-agent-sandbox-escapes-week-cursor-codex-gemini-claude-enterprise-developer-security-2026">SharedRoot</a></h3>
+              <p class="who">Accomplish AI</p>
+              <p>A chain of steps gave the agent read and write access to the host computer&rsquo;s files.</p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 px-0">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>The walls keep leaking</h2>
+          </li>
+          <li>
+            <time datetime="2026-07">Jul 2026</time>
+            <div>
+              <h3><a href="https://www.beri.net/article/ai-coding-agent-sandbox-escapes-week-cursor-codex-gemini-claude-enterprise-developer-security-2026">Seven findings in four tools</a></h3>
+              <p class="who">Pillar Security</p>
+              <p>Agents wrote settings files, or used trusted command names, that the unprotected host ran later.</p>
             </div>
-            <p>
-              A sandbox is the wall between an AI agent and everything else on the
-              machine: your files, your keys, your network. Researchers keep finding
-              holes in it. Between July and September 2026 alone, they published at
-              least five separate escapes in popular coding agent tools.
-            </p>
-            <p>
-              Most of them didn&rsquo;t need a clever prompt. A project&rsquo;s own
-              settings ran a command outside the box. An agent wrote a file that its
-              unprotected host ran later. A sandbox could be switched off from inside.
-            </p>
-            <p>
-              Those are plumbing bugs, and plumbing can be tested directly. That&rsquo;s
-              what Husk does.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end why now -->
-
-  <!-- what it checks -->
-  <section class="service_section layout_padding" id="checks">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>What Husk checks</h2>
-        <p style="max-width: 40em; margin-top: 14px;">
-          Four walls. If any one of them fails, a hijacked agent can do real damage.
+          </li>
+          <li>
+            <time datetime="2026-08">Aug 2026</time>
+            <div>
+              <h3><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-deepseek-harness-sandbox-escape-20260910-c/">GuardFall</a></h3>
+              <p class="who">Reported by the Cloud Security Alliance</p>
+              <p>Blocked commands could be disguised to slip past the filter in 10 of 11 open-source agents.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-09">Sep 2026</time>
+            <div>
+              <h3><a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html">GitSpawn</a></h3>
+              <p class="who">Manifold Security</p>
+              <p>A project&rsquo;s own git settings ran a command outside the sandbox: 8 flaws across 7 agents.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-09">Sep 2026</time>
+            <div>
+              <h3><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-deepseek-harness-sandbox-escape-20260910-c/">DeepSeek Harness escape</a></h3>
+              <p class="who">Reported by the Cloud Security Alliance</p>
+              <p>The agent could reach the switch that turned its own sandbox off.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="section-close">
+          These are plumbing bugs, and plumbing can be tested directly. That&rsquo;s what Husk does.
         </p>
       </div>
-      <div class="row">
+    </section>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M3 6.5a2 2 0 0 1 2-2h4.2l2 2.2H19a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <path d="M3 9.6h18" />
-              </svg>
-            </div>
-            <div class="detail-box">
-              <h6>Files</h6>
-              <p>
-                Can the agent read or change anything outside its workspace, like your
-                SSH keys or your other projects?
-              </p>
-            </div>
+    <section class="section" id="checks">
+      <div class="page">
+        <h2>What Husk checks</h2>
+        <p class="section-intro">Four walls. If any one of them fails, a hijacked agent can do real damage.</p>
+        <dl class="walls">
+          <div>
+            <dt>Files</dt>
+            <dd>Can the agent read or change anything outside its workspace, like your SSH keys or your other projects?</dd>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="12" cy="12" r="8.6" />
-                <path d="M3.4 12h17.2" />
-                <path d="M12 3.4c2.6 2.4 3.8 5.3 3.8 8.6s-1.2 6.2-3.8 8.6c-2.6-2.4-3.8-5.3-3.8-8.6S9.4 5.8 12 3.4z" />
-              </svg>
-            </div>
-            <div class="detail-box">
-              <h6>Network</h6>
-              <p>
-                Can it send data out to the internet, or reach services on the machine
-                that it should never touch?
-              </p>
-            </div>
+          <div>
+            <dt>Network</dt>
+            <dd>Can it send data out to the internet, or reach services on the machine it should never touch?</dd>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="8" cy="12" r="4.2" />
-                <path d="M12.2 12H21" />
-                <path d="M17.6 12v3.2" />
-                <path d="M20.6 12v2.4" />
-              </svg>
-            </div>
-            <div class="detail-box">
-              <h6>Secrets</h6>
-              <p>
-                Does it ever get its hands on a real password or token, or only on
-                stand-ins that are useless if stolen?
-              </p>
-            </div>
+          <div>
+            <dt>Secrets</dt>
+            <dd>Does it ever hold a real password or token, or only stand-ins that are useless if stolen?</dd>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="box">
-            <div class="img-box">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M12 2.9l7.6 3v5.5c0 4.6-3.1 8.4-7.6 9.7-4.5-1.3-7.6-5.1-7.6-9.7V5.9z" />
-                <path d="M8.6 12l2.3 2.3 4.5-4.7" />
-              </svg>
-            </div>
-            <div class="detail-box">
-              <h6>Its own controls</h6>
-              <p>
-                Can it switch off its own restrictions, or leave something behind that
-                runs later, outside the box?
-              </p>
-            </div>
+          <div>
+            <dt>Its own controls</dt>
+            <dd>Can it switch off its own restrictions, or leave something behind that runs later, outside the box?</dd>
           </div>
-        </div>
-
+        </dl>
       </div>
-    </div>
-  </section>
-  <!-- end what it checks -->
+    </section>
 
-  <!-- how it works -->
-  <section class="steps_section layout_padding" id="how">
-    <div class="container">
-      <div class="heading_container heading_center">
+    <section class="section" id="how">
+      <div class="page">
         <h2>How it works</h2>
+        <ol class="steps">
+          <li>
+            <h3>Run it inside the box</h3>
+            <p>Start Husk in the same sandbox your agent uses, on your own machine or in your build pipeline.</p>
+          </li>
+          <li>
+            <h3>It tries every known way out</h3>
+            <p>Each check copies a published escape and tries it directly. No AI model is in the loop, so a pass means the wall held, not that the agent wasn&rsquo;t tempted.</p>
+          </li>
+          <li>
+            <h3>You get proof</h3>
+            <p>Pass or fail for every check, with the evidence, in a report you can hand to a customer&rsquo;s security team.</p>
+          </li>
+        </ol>
       </div>
-      <div class="row" style="margin-top: 45px;">
-        <div class="col-md-4">
-          <div class="box">
-            <div class="step_num">1</div>
-            <h5>Run it inside the box</h5>
-            <p>
-              Start Husk in the same sandbox your agent uses, on your own machine or
-              in your build pipeline.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <div class="step_num tier_deep">2</div>
-            <h5>It tries every known way out</h5>
-            <p>
-              Each check copies a published escape and tries it directly. There&rsquo;s
-              no AI model in the loop, so a pass means the wall held, not that the
-              agent just wasn&rsquo;t tempted.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <div class="step_num tier_probe">3</div>
-            <h5>You get proof</h5>
-            <p>
-              Pass or fail for every check, with the evidence, in a report you can
-              hand to a customer&rsquo;s security team. When a new escape is
-              published, a new check follows.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end how it works -->
+    </section>
 
-  <!-- who it's for -->
-  <section class="panel_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="panel">
-            <div class="heading_container">
-              <h2>Who it&rsquo;s for</h2>
-            </div>
-            <ul>
-              <li>Teams that build AI agents and keep getting asked whether the sandbox really holds</li>
-              <li>Teams running their own agent harness that nobody else is testing</li>
-              <li>Pen testers who&rsquo;ve been asked to test an agent and need checks that are current</li>
-            </ul>
-            <p style="margin-top: 24px;">
-              Husk is in early development. Join the waitlist and you&rsquo;ll be the
-              first to hear when early access opens.
-            </p>
-            <div class="btn-box" style="margin-top: 30px;">
-              <a href="#waitlist">Join the waitlist</a>
-            </div>
-          </div>
-        </div>
+    <section class="section">
+      <div class="page">
+        <h2>Who it&rsquo;s for</h2>
+        <ul class="audience">
+          <li>Teams that build AI agents and keep getting asked whether the sandbox really holds</li>
+          <li>Teams running their own agent harness that nobody else is testing</li>
+          <li>Pen testers who&rsquo;ve been asked to test an agent and need checks that are current</li>
+        </ul>
       </div>
-    </div>
-  </section>
-  <!-- end who it's for -->
+    </section>
 
-  <!-- waitlist -->
-  <section class="contact_section layout_padding" id="waitlist">
-    <div class="contact_bg_box"></div>
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>Join the waitlist</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-7 mx-auto">
-          <!-- Sign-ups go to Formspree (form xrpqrjne), which emails them to you. -->
-          <form action="https://formspree.io/f/xrpqrjne" method="POST">
-            <input type="hidden" name="_subject" value="Husk waitlist sign-up" />
-            <!-- Spam trap: hidden from people, filled in by bots -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <div class="contact_form-container">
-              <div>
-                <div><input type="email" name="email" placeholder="Work or personal email" required aria-label="Email" /></div>
-                <div><input type="text" name="agent" placeholder="Which agent? (optional)" aria-label="What agent or harness do you run? (optional)" /></div>
-                <div class="btn-box">
-                  <button type="submit">Join the waitlist</button>
-                </div>
-              </div>
-            </div>
-          </form>
-          <p style="color: var(--buko-white); text-align: center; margin-top: 18px;">
-            We&rsquo;ll only use your email to tell you about Husk.
+    <section class="section waitlist" id="waitlist">
+      <div class="page">
+        <div>
+          <h2>Get early access</h2>
+          <p class="section-intro">
+            Husk is in early development. Join the waitlist and you&rsquo;ll be the
+            first to hear when early access opens.
           </p>
         </div>
+        <form class="waitlist-form" action="https://formspree.io/f/xrpqrjne" method="POST">
+          <input type="hidden" name="_subject" value="Husk waitlist sign-up" />
+          <input type="hidden" name="source" value="footer" />
+          <div class="trap" aria-hidden="true">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+          <label for="wl-email">Email</label>
+          <input class="field" id="wl-email" type="email" name="email" placeholder="you@company.com" required />
+          <label for="wl-agent">Which agent or harness do you run? (optional)</label>
+          <input class="field" id="wl-agent" type="text" name="agent" placeholder="Claude Code, Codex, our own" />
+          <button class="button" type="submit">Join the waitlist</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="page">
+      <div>
+        <p class="footer-brand">Buko Technologies</p>
+        <p>&copy; <span id="year">2026</span> Buko Technologies. All rights reserved.</p>
+      </div>
+      <div>
+        <p><a href="mailto:hello@bukotechnologies.com">hello@bukotechnologies.com</a></p>
+        <p><a href="tel:+13523603817">(352) 360-3817</a></p>
+        <p>San Diego, CA</p>
       </div>
     </div>
-  </section>
-  <!-- end waitlist -->
-
-  <!-- footer info -->
-  <section class="info_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="info_logo">
-            <a class="navbar-brand" href="index.html">
-              <span>Buko Technologies</span>
-            </a>
-            <p>Simplifying the world, one boring-but-essential thing at a time.</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info_info">
-            <h5>Get in touch</h5>
-          </div>
-          <div class="info_contact">
-            <a href="#">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>San Diego, CA &middot; Serving businesses globally</span>
-            </a>
-            <a href="tel:+13523603817">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>Call: (352) 360-3817</span>
-            </a>
-            <a href="mailto:hello@bukotechnologies.com">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>hello@bukotechnologies.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end footer info -->
-
-  <footer class="container-fluid footer_section">
-    <p>&copy; <span id="currentYear"></span> Buko Technologies. All rights reserved.</p>
   </footer>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/custom.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Print the example run line by line, once, on page load.
+    (function () {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var terminal = document.getElementById("terminal");
+      var lines = terminal.querySelectorAll(".t-row, .t-summary");
+      lines.forEach(function (line, i) {
+        line.style.animationDelay = (0.4 + i * 0.32) + "s";
+      });
+      terminal.classList.add("is-running");
+    })();
+  </script>
+
 </body>
 
 </html>

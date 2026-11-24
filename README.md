@@ -15,16 +15,17 @@ in the `husk-waitlist` change and can be restored from git history.
 
 ## Working on this site
 
-No build step. `css/style.css` is committed compiled output, so `css/style.scss` is
-inert — editing it does nothing.
+No build step and no frameworks. The page is plain HTML and one stylesheet, plus
+a few lines of inline JavaScript that set the footer year and play the terminal
+animation once on load.
 
 | Path | What it is |
 |------|-----------|
 | `index.html` | The one page |
-| `css/buko-theme.css` | **All branding.** Edit the `:root` block at the top to restyle the whole site |
-| `css/style.css`, `css/responsive.css`, `css/bootstrap.css` | Template styles — don't edit |
-| `images/buko-about.svg` | Brand illustration |
-| `js/custom.js` | Sets the footer copyright year |
+| `css/husk.css` | **All styling.** The palette and fonts are in the `:root` block at the top |
+| `images/favicon.png` | Browser tab icon |
+
+Fonts (Martian Mono and Instrument Sans) load from Google Fonts.
 
 Preview locally with `python3 -m http.server`, then open <http://localhost:8000>.
 
@@ -38,7 +39,7 @@ The waitlist form posts to Formspree form `xrpqrjne`, which emails each sign-up.
 
 ### Security note
 
-The template's copy of `js/bootstrap.js` had one extra line that downloaded and ran a
-script from `leostop.com` on every page view. It was removed in the `husk-waitlist`
-change. The rest of `js/bootstrap.js` and `js/jquery-3.4.1.min.js` match the official
-Bootstrap 4.3.1 and jQuery 3.4.1 releases. Don't re-copy these files from the template.
+The original template's `js/bootstrap.js` had one extra line that downloaded and ran
+a script from `leostop.com` on every page view. The redesign removed the template's
+JavaScript, CSS, fonts and images entirely, so the site no longer ships any of it.
+Don't re-add files from that template.
