@@ -669,14 +669,9 @@ a:hover { color: var(--signal-hover); }
   width: 112px;
   height: 112px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  object-fit: cover;
+  border: 2px solid var(--rule);
   background: var(--panel);
-  border: 1px solid var(--rule);
-  color: var(--signal);
-  font-weight: 800;
-  font-size: 44px;
-  font-variation-settings: "wdth" 125;
 }
 
 .person h3 {
@@ -711,7 +706,7 @@ a:hover { color: var(--signal-hover); }
 
 @media (max-width: 560px) {
   .person { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .avatar { width: 72px; height: 72px; font-size: 30px; }
+  .avatar { width: 88px; height: 88px; }
 }
 
 @media (max-width: 760px) {
