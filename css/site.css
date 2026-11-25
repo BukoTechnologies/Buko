@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Husk by Buko Technologies
+   Buko Technologies
    One self-contained stylesheet. The page uses no Bootstrap or template CSS.
 
    The look is an instrument panel: deep navy, a faint measurement grid
    behind the hero, signal blue for actions. The one bold element is the
-   containment report in the hero.
+   example firmware report in the hero.
 
    Palette
      navy     #0E1A2B  page background
@@ -13,8 +13,8 @@
      text     #E6EDF7  body text
      muted    #93A4BC  secondary text
      signal   #6EA8FF  buttons, links, focus
-     held     #4FD1A1  a wall that held
-     escaped  #FF6B5E  a wall that failed
+     held     #4FD1A1  green accents
+     escaped  #FF6B5E  a confirmed bug
 
    Type
      Archivo        headlines (extra-wide cut, width 125) and body text
@@ -207,7 +207,7 @@ a:hover { color: var(--signal-hover); }
   font-size: clamp(38px, 6.2vw, 80px);
   line-height: 0.98;
   letter-spacing: -0.02em;
-  max-width: 14ch;
+  max-width: 15ch;
 }
 
 .hero-body {
@@ -293,13 +293,14 @@ a:hover { color: var(--signal-hover); }
 
 .checks li + li { border-top: 1px solid rgba(36, 57, 90, 0.7); }
 
-.checks li.is-escaped {
+.checks li.is-confirmed {
   background: var(--escaped-wash);
   box-shadow: inset 3px 0 0 var(--escaped);
 }
 
 .c-wall { color: var(--muted); }
 .c-test { min-width: 0; }
+.c-test code { color: var(--signal); }
 
 .c-result {
   justify-self: end;
@@ -311,9 +312,9 @@ a:hover { color: var(--signal-hover); }
   border: 1px solid currentColor;
 }
 
-.c-result.held { color: var(--held); }
+.c-result.ruled { color: var(--muted); }
 
-.c-result.escaped {
+.c-result.confirmed {
   color: var(--navy-deep);
   background: var(--escaped);
   border-color: var(--escaped);
@@ -329,8 +330,8 @@ a:hover { color: var(--signal-hover); }
   font-size: 14px;
 }
 
-.sheet-total span:first-child { color: var(--held); }
-.sheet-total .bad { color: var(--escaped); }
+.sheet-total span:first-child { color: var(--escaped); }
+.sheet-total .muted { color: var(--muted); }
 
 .report figcaption {
   margin-top: 12px;
@@ -614,7 +615,7 @@ a:hover { color: var(--signal-hover); }
   .sheet-total { padding: 12px 16px 14px; }
 }
 
-/* ---------- what Husk does on your machine ---------- */
+/* ---------- how we handle your firmware ---------- */
 
 .promises {
   list-style: none;

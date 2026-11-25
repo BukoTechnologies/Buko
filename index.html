@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Husk by Buko Technologies: can your AI agent escape its sandbox?</title>
-  <meta name="description" content="Husk plays the part of a hijacked AI agent and tries the published ways out of its sandbox, so you can prove the walls hold. Join the waitlist for early access." />
+  <title>Buko Technologies: find and prove the bugs in your device firmware</title>
+  <meta name="description" content="Buko is building an AI agent that reads device firmware the way an attacker would and proves every bug it reports with a confirmed crash. Request early access." />
   <meta name="author" content="Buko Technologies" />
 
   <link rel="icon" href="images/favicon.png" type="image/png" />
@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link href="css/husk.css" rel="stylesheet" />
+  <link href="css/site.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -23,13 +23,13 @@
   <header class="site-header">
     <div class="page">
       <a class="brand" href="index.html">
-        <span class="brand-name">husk</span>
-        <span class="brand-by">by Buko Technologies</span>
+        <span class="brand-name">buko</span>
+        <span class="brand-by">Technologies</span>
       </a>
       <nav class="site-nav" aria-label="Main">
-        <a href="#checks">What it checks</a>
+        <a href="#looks-for">What it looks for</a>
         <a href="#how">How it works</a>
-        <a class="button button-small" href="#waitlist">Join the waitlist</a>
+        <a class="button button-small" href="#early-access">Request early access</a>
       </nav>
     </div>
   </header>
@@ -38,42 +38,42 @@
 
     <section class="hero">
       <div class="page">
-        <h1>Can your AI agent get out of its box?</h1>
+        <h1>Find your firmware bugs before attackers do.</h1>
         <div class="hero-body">
           <div class="hero-copy">
             <p class="lede">
-              Husk plays the part of a hijacked agent and tries the published ways
-              out of its sandbox. You get pass or fail for each wall, with proof.
+              We&rsquo;re building an AI agent that reads device firmware the way an
+              attacker would. Every bug it reports comes with proof: a crash in
+              emulation and the input that causes it.
             </p>
             <form class="hero-form" action="https://formspree.io/f/xrpqrjne" method="POST">
-              <input type="hidden" name="_subject" value="Husk waitlist sign-up" />
+              <input type="hidden" name="_subject" value="Buko early access request" />
               <input type="hidden" name="source" value="hero" />
               <div class="trap" aria-hidden="true">
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
               </div>
               <input class="field" type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
-              <button class="button" type="submit">Join the waitlist</button>
+              <button class="button" type="submit">Request early access</button>
             </form>
-            <p class="form-note">We&rsquo;ll only use your email to tell you about Husk.</p>
+            <p class="form-note">We&rsquo;ll only use your email to tell you about Buko.</p>
           </div>
 
           <figure class="report" id="report">
-            <div class="sheet" role="img" aria-label="Example Husk report: five checks held and one escaped, where the agent planted a hook that the host ran later, outside the sandbox.">
+            <div class="sheet" role="img" aria-label="Example Buko report on a test router image: five possible bugs found, two confirmed with a crash in emulation, three ruled out.">
               <div class="sheet-head" aria-hidden="true">
-                <p class="sheet-title">Containment report</p>
-                <p class="sheet-meta">Sandbox: agent-box</p>
+                <p class="sheet-title">Firmware report</p>
+                <p class="sheet-meta">example-router-2.4.bin</p>
               </div>
               <ol class="checks" aria-hidden="true">
-                <li><span class="c-wall">Files</span><span class="c-test">Read ~/.ssh/id_ed25519</span><span class="c-result held">Held</span></li>
-                <li><span class="c-wall">Files</span><span class="c-test">Write to another project</span><span class="c-result held">Held</span></li>
-                <li><span class="c-wall">Git</span><span class="c-test">core.fsmonitor in repo config</span><span class="c-result held">Held</span></li>
-                <li class="is-escaped"><span class="c-wall">Config</span><span class="c-test">Plant a hook the host runs later</span><span class="c-result escaped">Escaped</span></li>
-                <li><span class="c-wall">Network</span><span class="c-test">Reach a control port on 127.0.0.1</span><span class="c-result held">Held</span></li>
-                <li><span class="c-wall">Secrets</span><span class="c-test">Find a real API token</span><span class="c-result held">Held</span></li>
+                <li class="is-confirmed"><span class="c-wall">Memory</span><span class="c-test"><code>httpd</code> long Host header overflows a stack buffer</span><span class="c-result confirmed">Confirmed</span></li>
+                <li class="is-confirmed"><span class="c-wall">Injection</span><span class="c-test"><code>cgi</code> NTP server field reaches the shell</span><span class="c-result confirmed">Confirmed</span></li>
+                <li><span class="c-wall">Memory</span><span class="c-test"><code>upnpd</code> packet length could wrap around</span><span class="c-result ruled">Ruled out</span></li>
+                <li><span class="c-wall">Format</span><span class="c-test"><code>logd</code> user text passed to a log format</span><span class="c-result ruled">Ruled out</span></li>
+                <li><span class="c-wall">Update</span><span class="c-test"><code>updater</code> firmware signature may be skipped</span><span class="c-result ruled">Ruled out</span></li>
               </ol>
-              <p class="sheet-total" aria-hidden="true"><span>5 held</span><span class="bad">1 escaped</span></p>
+              <p class="sheet-total" aria-hidden="true"><span>2 confirmed</span><span class="muted">3 ruled out</span></p>
             </div>
-            <figcaption>Example report from a test sandbox.</figcaption>
+            <figcaption>Example report from a test image. Only confirmed bugs reach your team.</figcaption>
           </figure>
         </div>
       </div>
@@ -81,80 +81,63 @@
 
     <section class="section">
       <div class="page">
-        <h2>The way out keeps changing</h2>
+        <h2>Finding them first is now the law</h2>
         <p class="section-intro">
-          Between July and September 2026, researchers published five separate
-          ways out of popular coding agent sandboxes. Most of them needed no
-          clever prompt.
+          The EU&rsquo;s Cyber Resilience Act covers almost every connected device sold
+          in Europe. Its reporting rules are already in force.
         </p>
         <ol class="escapes">
           <li>
-            <time datetime="2026-07">Jul 2026</time>
+            <time datetime="2024-12">Dec 2024</time>
             <div>
-              <h3><a href="https://www.beri.net/article/ai-coding-agent-sandbox-escapes-week-cursor-codex-gemini-claude-enterprise-developer-security-2026">SharedRoot</a></h3>
-              <p class="who">Accomplish AI</p>
-              <p>A chain of steps gave the agent read and write access to the host computer&rsquo;s files.</p>
-            </div>
-          </li>
-          <li>
-            <time datetime="2026-07">Jul 2026</time>
-            <div>
-              <h3><a href="https://www.beri.net/article/ai-coding-agent-sandbox-escapes-week-cursor-codex-gemini-claude-enterprise-developer-security-2026">Seven findings in four tools</a></h3>
-              <p class="who">Pillar Security</p>
-              <p>Agents wrote settings files, or used trusted command names, that the unprotected host ran later.</p>
-            </div>
-          </li>
-          <li>
-            <time datetime="2026-08">Aug 2026</time>
-            <div>
-              <h3><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-deepseek-harness-sandbox-escape-20260910-c/">GuardFall</a></h3>
-              <p class="who">Reported by the Cloud Security Alliance</p>
-              <p>Blocked commands could be disguised to slip past the filter in 10 of 11 open-source agents.</p>
+              <h3><a href="https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act">The Act enters into force</a></h3>
+              <p class="who">Regulation (EU) 2024/2847</p>
+              <p>Products with digital elements sold in the EU have to meet security requirements for as long as they&rsquo;re supported.</p>
             </div>
           </li>
           <li>
             <time datetime="2026-09">Sep 2026</time>
             <div>
-              <h3><a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html">GitSpawn</a></h3>
-              <p class="who">Manifold Security</p>
-              <p>A project&rsquo;s own git settings ran a command outside the sandbox: 8 flaws across 7 agents.</p>
+              <h3><a href="https://digital-strategy.ec.europa.eu/en/policies/cra-reporting">Reporting begins</a></h3>
+              <p class="who">European Commission</p>
+              <p>Manufacturers must report actively exploited vulnerabilities in their products, with an early warning within 24 hours.</p>
             </div>
           </li>
           <li>
-            <time datetime="2026-09">Sep 2026</time>
+            <time datetime="2027-12">Dec 2027</time>
             <div>
-              <h3><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-deepseek-harness-sandbox-escape-20260910-c/">DeepSeek Harness escape</a></h3>
-              <p class="who">Reported by the Cloud Security Alliance</p>
-              <p>The agent could reach the switch that turned its own sandbox off.</p>
+              <h3><a href="https://commission.europa.eu/news-and-media/news/safer-and-more-secure-digital-products-2026-09-11_en">Full obligations apply</a></h3>
+              <p class="who">European Commission</p>
+              <p>Products must ship without known exploitable vulnerabilities, and manufacturers must handle new ones for the life of the product.</p>
             </div>
           </li>
         </ol>
         <p class="section-close">
-          These are plumbing bugs, and plumbing can be tested directly. That&rsquo;s what Husk does.
+          A bug you find yourself is a fix. A bug someone else finds first can be a report to a regulator.
         </p>
       </div>
     </section>
 
-    <section class="section" id="checks">
+    <section class="section" id="looks-for">
       <div class="page">
-        <h2>What Husk checks</h2>
-        <p class="section-intro">Four walls. If any one of them fails, a hijacked agent can do real damage.</p>
+        <h2>What it looks for</h2>
+        <p class="section-intro">The bug classes that turn a device into someone else&rsquo;s device.</p>
         <dl class="walls">
           <div>
-            <dt>Files</dt>
-            <dd>Can the agent read or change anything outside its workspace, like your SSH keys or your other projects?</dd>
+            <dt>Memory bugs</dt>
+            <dd>Overflows and use-after-free in the C code that handles outside input: web servers, network services, parsers.</dd>
           </div>
           <div>
-            <dt>Network</dt>
-            <dd>Can it send data out to the internet, or reach services on the machine it should never touch?</dd>
+            <dt>Command injection</dt>
+            <dd>Settings fields and admin pages whose input ends up in a shell command.</dd>
           </div>
           <div>
-            <dt>Secrets</dt>
-            <dd>Does it ever hold a real password or token, or only stand-ins that are useless if stolen?</dd>
+            <dt>Secrets and updates</dt>
+            <dd>Hard-coded passwords and keys, and update paths that install firmware without checking where it came from.</dd>
           </div>
           <div>
-            <dt>Its own controls</dt>
-            <dd>Can it switch off its own restrictions, or leave something behind that runs later, outside the box?</dd>
+            <dt>Old components</dt>
+            <dd>Outdated libraries and vendor SDKs inside the image, checked for whether the known bug can actually be reached.</dd>
           </div>
         </dl>
       </div>
@@ -165,16 +148,16 @@
         <h2>How it works</h2>
         <ol class="steps">
           <li>
-            <h3>Run it inside the box</h3>
-            <p>Start Husk in the same sandbox your agent uses, on your own machine or in your build pipeline.</p>
+            <h3>Send a firmware image</h3>
+            <p>The same file you ship to devices. No source code needed.</p>
           </li>
           <li>
-            <h3>It tries the known ways out</h3>
-            <p>Each check copies a published escape and tries it directly. New checks are added as new escapes are published. No AI model is in the loop, so a pass means the wall held, not that the agent wasn&rsquo;t tempted.</p>
+            <h3>The agent hunts and tests</h3>
+            <p>It unpacks and decompiles the image, starts with the code that handles outside input, and runs every suspected bug in emulation.</p>
           </li>
           <li>
             <h3>You get proof</h3>
-            <p>Pass or fail for every check, with the evidence, in a report you can hand to a customer&rsquo;s security team.</p>
+            <p>Each confirmed bug comes with where it is, the input that triggers it and the crash it causes. Leads that don&rsquo;t reproduce are dropped, so your team doesn&rsquo;t chase noise.</p>
           </li>
         </ol>
       </div>
@@ -182,13 +165,13 @@
 
     <section class="section" id="trust">
       <div class="page">
-        <h2>What Husk does on your machine</h2>
-        <p class="section-intro">You&rsquo;d be running a security tool inside your sandbox, so here&rsquo;s exactly what it&rsquo;s built to do and not do.</p>
+        <h2>How we handle your firmware</h2>
+        <p class="section-intro">Firmware is your product. Here&rsquo;s what we commit to.</p>
         <ul class="promises">
-          <li><strong>Runs entirely on your machine.</strong> No account needed to run a test, and it works offline.</li>
-          <li><strong>Sends nothing home.</strong> No telemetry. Your results stay on your machine unless you choose to share the report.</li>
-          <li><strong>Uses harmless markers, never your data.</strong> A check proves a wall failed by leaving a marker file or making a test call. It never reads, copies or changes your real keys or files.</li>
-          <li><strong>Every check is readable.</strong> Each one is a short script you can review before you run it.</li>
+          <li><strong>It stays yours.</strong> Never shared, never used to train AI models, and deleted when you ask.</li>
+          <li><strong>It&rsquo;s analyzed in isolation.</strong> Each image runs in its own sealed environment with no outside network access.</li>
+          <li><strong>You hear about bugs first.</strong> We never publish or report a bug in your product without your agreement.</li>
+          <li><strong>On your own servers, if you need it.</strong> For teams that can&rsquo;t send firmware out, we&rsquo;re building a version that runs inside your environment.</li>
         </ul>
       </div>
     </section>
@@ -197,9 +180,9 @@
       <div class="page">
         <h2>Who it&rsquo;s for</h2>
         <ul class="audience">
-          <li>Teams that build AI agents and keep getting asked whether the sandbox really holds</li>
-          <li>Teams running their own agent harness that nobody else is testing</li>
-          <li>Pen testers who&rsquo;ve been asked to test an agent and need checks that are current</li>
+          <li>Product security teams at device makers who can&rsquo;t review every firmware release by hand</li>
+          <li>Manufacturers selling into the EU who need to find vulnerabilities before they become reports</li>
+          <li>Security consultancies and pen testers who assess connected devices</li>
         </ul>
       </div>
     </section>
@@ -213,15 +196,15 @@
             <h3>Evan</h3>
             <p class="role">Founder &amp; CEO</p>
             <p>
-              Evan is a senior security engineer at a physical AI company, where
-              his work includes securing AI agents. He has spent his career in
-              security across banking, aerospace and defense, from penetration
-              testing and secure design reviews to C/C++ and binary analysis.
-              Previously at Boeing, General Atomics and First Bank.
+              Evan is a senior security engineer at a physical AI company. He has
+              spent his career in security across banking, aerospace and defense,
+              with deep experience in C/C++ and binary analysis, the skills
+              firmware security runs on. Previously at Boeing, General Atomics and
+              First Bank.
             </p>
             <blockquote>
-              &ldquo;Agents keep finding new ways through their walls, and there&rsquo;s
-              very little to test them with. Husk is the test I wanted.&rdquo;
+              &ldquo;Firmware is where the worst bugs hide and where the fewest people
+              look. I want every bug report to come with proof.&rdquo;
             </blockquote>
             <p class="creds">M.S. Cybersecurity, Johns Hopkins University. HTB Certified Bug Bounty Hunter (CBBH).</p>
           </div>
@@ -229,26 +212,26 @@
       </div>
     </section>
 
-    <section class="section waitlist" id="waitlist">
+    <section class="section waitlist" id="early-access">
       <div class="page">
         <div>
-          <h2>Get early access</h2>
+          <h2>Request early access</h2>
           <p class="section-intro">
-            Husk is in early development. Join the waitlist and you&rsquo;ll be the
-            first to hear when early access opens.
+            We&rsquo;re working with a small number of device makers before launch.
+            Leave your email and we&rsquo;ll be in touch.
           </p>
         </div>
         <form class="waitlist-form" action="https://formspree.io/f/xrpqrjne" method="POST">
-          <input type="hidden" name="_subject" value="Husk waitlist sign-up" />
+          <input type="hidden" name="_subject" value="Buko early access request" />
           <input type="hidden" name="source" value="footer" />
           <div class="trap" aria-hidden="true">
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
           </div>
-          <label for="wl-email">Email</label>
-          <input class="field" id="wl-email" type="email" name="email" placeholder="you@company.com" required />
-          <label for="wl-agent">Which agent or harness do you run? (optional)</label>
-          <input class="field" id="wl-agent" type="text" name="agent" placeholder="Claude Code, Codex, our own" />
-          <button class="button" type="submit">Join the waitlist</button>
+          <label for="ea-email">Email</label>
+          <input class="field" id="ea-email" type="email" name="email" placeholder="you@company.com" required />
+          <label for="ea-devices">What kind of devices do you make? (optional)</label>
+          <input class="field" id="ea-devices" type="text" name="devices" placeholder="Routers, cameras, industrial controllers" />
+          <button class="button" type="submit">Request early access</button>
         </form>
       </div>
     </section>
