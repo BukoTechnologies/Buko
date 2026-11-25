@@ -3,27 +3,26 @@
 Source for [bukotechnologies.com](https://www.bukotechnologies.com), served via
 GitHub Pages (see `CNAME`).
 
-## Husk
+## What the site is for
 
-AI agents run inside sandboxes, and researchers keep publishing new ways out.
-Husk plays the part of a hijacked agent and tries every published escape directly,
-then reports pass or fail for each wall with proof. New checks follow new
-disclosures. The site is currently a one-page waitlist for early access.
+Buko is building an AI agent that finds bugs in device firmware and proves each one
+with a confirmed crash in emulation. The site is a one-page early-access sign-up.
 
-The earlier Winnow pages (`about.html`, `service.html`, `contact.html`) were removed
-in the `husk-waitlist` change and can be restored from git history.
+Earlier versions of the site covered Winnow (security questionnaires) and Husk
+(an agent sandbox test kit). Both are retired and can be found in git history.
 
 ## Working on this site
 
 No build step and no frameworks. The page is plain HTML and one stylesheet, plus
-a few lines of inline JavaScript that set the footer year and play the terminal
+a few lines of inline JavaScript that set the footer year and play the report
 animation once on load.
 
 | Path | What it is |
 |------|-----------|
 | `index.html` | The one page |
-| `css/husk.css` | **All styling.** The palette and fonts are in the `:root` block at the top |
+| `css/site.css` | **All styling.** The palette and fonts are in the `:root` block at the top |
 | `images/favicon.png` | Browser tab icon |
+| `images/evan.jpg` | Founder headshot (metadata stripped) |
 
 Fonts (Archivo and IBM Plex Mono) load from Google Fonts. Headlines use the extra-wide cut of Archivo.
 
@@ -33,9 +32,9 @@ Preview locally with `python3 -m http.server`, then open <http://localhost:8000>
 
 - `images/favicon.png` is still the original template's
 
-### Waitlist sign-ups
+### Early-access sign-ups
 
-The waitlist form posts to Formspree form `xrpqrjne`, which emails each sign-up. Manage it at formspree.io.
+Both forms post to Formspree form `xrpqrjne`, which emails each sign-up. The `source` field says which form it came from. Manage it at formspree.io.
 
 ### Security note
 
