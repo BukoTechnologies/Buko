@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Buko Technologies: find and prove the bugs in your device firmware</title>
-  <meta name="description" content="Buko is building an AI agent that reads device firmware the way an attacker would and proves every bug it reports with a confirmed crash. Request early access." />
+  <title>Buko Technologies: catch known firmware bugs in every release, with proof</title>
+  <meta name="description" content="Many firmware bugs aren&rsquo;t new: they&rsquo;re a known bug family turning up in a model or release nobody flagged. Buko is building an AI agent that checks every release for them and proves each bug with a confirmed crash. Request early access." />
   <meta name="author" content="Buko Technologies" />
 
   <link rel="icon" href="images/favicon.png" type="image/png" />
@@ -38,13 +38,14 @@
 
     <section class="hero">
       <div class="page">
-        <h1>Find your firmware bugs before attackers do.</h1>
+        <h1>Catch known bugs the moment they land in your firmware.</h1>
         <div class="hero-body">
           <div class="hero-copy">
             <p class="lede">
-              We&rsquo;re building an AI agent that reads device firmware the way an
-              attacker would. Every bug it reports comes with proof: a crash in
-              emulation and the input that causes it.
+              Many firmware bugs aren&rsquo;t new. They&rsquo;re a known bug family
+              turning up in a model or release nobody flagged. We&rsquo;re building an
+              AI agent that checks every release you ship for them and proves each
+              bug it finds: a crash in emulation and the input that causes it.
             </p>
             <form class="hero-form" action="https://formspree.io/f/xrpqrjne" method="POST">
               <input type="hidden" name="_subject" value="Buko early access request" />
@@ -61,19 +62,19 @@
           <figure class="report" id="report">
             <div class="sheet" role="img" aria-label="Example Buko report on a test router image: five possible bugs found, two confirmed with a crash in emulation, three ruled out.">
               <div class="sheet-head" aria-hidden="true">
-                <p class="sheet-title">Firmware report</p>
+                <p class="sheet-title">Release report</p>
                 <p class="sheet-meta">example-router-2.4.bin</p>
               </div>
               <ol class="checks" aria-hidden="true">
-                <li class="is-confirmed"><span class="c-wall">Memory</span><span class="c-test"><code>httpd</code> long Host header overflows a stack buffer</span><span class="c-result confirmed">Confirmed</span></li>
-                <li class="is-confirmed"><span class="c-wall">Injection</span><span class="c-test"><code>cgi</code> NTP server field reaches the shell</span><span class="c-result confirmed">Confirmed</span></li>
+                <li class="is-confirmed"><span class="c-wall">Memory</span><span class="c-test"><code>httpd</code> known Host header overflow, now in this model</span><span class="c-result confirmed">Confirmed</span></li>
+                <li class="is-confirmed"><span class="c-wall">Injection</span><span class="c-test"><code>cgi</code> known NTP field injection, new in 2.4</span><span class="c-result confirmed">Confirmed</span></li>
                 <li><span class="c-wall">Memory</span><span class="c-test"><code>upnpd</code> packet length could wrap around</span><span class="c-result ruled">Ruled out</span></li>
                 <li><span class="c-wall">Format</span><span class="c-test"><code>logd</code> user text passed to a log format</span><span class="c-result ruled">Ruled out</span></li>
                 <li><span class="c-wall">Update</span><span class="c-test"><code>updater</code> firmware signature may be skipped</span><span class="c-result ruled">Ruled out</span></li>
               </ol>
               <p class="sheet-total" aria-hidden="true"><span>2 confirmed</span><span class="muted">3 ruled out</span></p>
             </div>
-            <figcaption>Example report from a test image. Only confirmed bugs reach your team.</figcaption>
+            <figcaption>Example report from a test image. Each lead is checked against known bug families, and only confirmed bugs reach your team.</figcaption>
           </figure>
         </div>
       </div>
@@ -113,7 +114,7 @@
           </li>
         </ol>
         <p class="section-close">
-          A bug you find yourself is a fix. A bug someone else finds first can be a report to a regulator.
+          Shipping a known exploitable bug is exactly what the Act rules out. A bug you find yourself is a fix. A bug someone else finds first can be a report to a regulator.
         </p>
       </div>
     </section>
@@ -121,7 +122,7 @@
     <section class="section" id="looks-for">
       <div class="page">
         <h2>What it looks for</h2>
-        <p class="section-intro">The bug classes that turn a device into someone else&rsquo;s device.</p>
+        <p class="section-intro">The bug families that keep coming back, release after release, and turn a device into someone else&rsquo;s device.</p>
         <dl class="walls">
           <div>
             <dt>Memory bugs</dt>
@@ -149,15 +150,15 @@
         <ol class="steps">
           <li>
             <h3>Send a firmware image</h3>
-            <p>The same file you ship to devices. No source code needed.</p>
+            <p>Start with one image, the same file you ship to devices. No source code needed.</p>
           </li>
           <li>
-            <h3>The agent hunts and tests</h3>
-            <p>It unpacks and decompiles the image, starts with the code that handles outside input, and runs every suspected bug in emulation.</p>
+            <h3>It checks for known bug families</h3>
+            <p>It unpacks and decompiles the image, looks for the bug families already found in other products and earlier releases, and runs every suspected match in emulation.</p>
           </li>
           <li>
-            <h3>You get proof</h3>
-            <p>Each confirmed bug comes with where it is, the input that triggers it and the crash it causes. Leads that don&rsquo;t reproduce are dropped, so your team doesn&rsquo;t chase noise.</p>
+            <h3>You get proof, every release</h3>
+            <p>Each confirmed bug comes with where it is, the input that triggers it and the crash it causes. Leads that don&rsquo;t reproduce are dropped, so your team doesn&rsquo;t chase noise. Then it checks each new release as you ship it.</p>
           </li>
         </ol>
       </div>
@@ -181,7 +182,7 @@
         <h2>Who it&rsquo;s for</h2>
         <ul class="audience">
           <li>Product security teams at device makers who can&rsquo;t review every firmware release by hand</li>
-          <li>Manufacturers selling into the EU who need to find vulnerabilities before they become reports</li>
+          <li>Manufacturers selling into the EU who have to ship without known exploitable vulnerabilities</li>
           <li>Security consultancies and pen testers who assess connected devices</li>
         </ul>
       </div>
