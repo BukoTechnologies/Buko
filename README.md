@@ -5,11 +5,14 @@ GitHub Pages (see `CNAME`).
 
 ## What the site is for
 
-Buko is building an AI agent that finds bugs in device firmware and proves each one
-with a confirmed crash in emulation. The site is a one-page early-access sign-up.
+Buko finds and fixes data exposure in apps built on Supabase: tables with
+row-level security missing or too loose. It checks a team's own schema, writes the
+policies that fix it, and blocks bad changes in CI. The site is a one-page
+early-access sign-up.
 
-Earlier versions of the site covered Winnow (security questionnaires) and Husk
-(an agent sandbox test kit). Both are retired and can be found in git history.
+Earlier versions of the site covered a firmware bug hunter, Winnow (security
+questionnaires) and Husk (an agent sandbox test kit). All are retired and can be
+found in git history.
 
 ## Working on this site
 

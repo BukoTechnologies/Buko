@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Buko Technologies: catch known firmware bugs in every release, with proof</title>
-  <meta name="description" content="Many firmware bugs aren&rsquo;t new: they&rsquo;re a known bug family turning up in a model or release nobody flagged. Buko is building an AI agent that checks every release for them and proves each bug with a confirmed crash. Request early access." />
+  <title>Buko Technologies: find and fix the Supabase data your app is leaving public</title>
+  <meta name="description" content="Apps built fast ship Supabase tables with missing or loose row-level security, so personal data is readable by anyone. Buko checks your own schema, writes the policies that fix it, and stops bad changes before they ship. Request early access." />
   <meta name="author" content="Buko Technologies" />
 
   <link rel="icon" href="images/favicon.png" type="image/png" />
@@ -27,7 +27,7 @@
         <span class="brand-by">Technologies</span>
       </a>
       <nav class="site-nav" aria-label="Main">
-        <a href="#looks-for">What it looks for</a>
+        <a href="#looks-for">What it fixes</a>
         <a href="#how">How it works</a>
         <a class="button button-small" href="#early-access">Request early access</a>
       </nav>
@@ -38,14 +38,15 @@
 
     <section class="hero">
       <div class="page">
-        <h1>Catch known bugs the moment they land in your firmware.</h1>
+        <h1>Find and fix the data your app is leaving public.</h1>
         <div class="hero-body">
           <div class="hero-copy">
             <p class="lede">
-              Many firmware bugs aren&rsquo;t new. They&rsquo;re a known bug family
-              turning up in a model or release nobody flagged. We&rsquo;re building an
-              AI agent that checks every release you ship for them and proves each
-              bug it finds: a crash in emulation and the input that causes it.
+              Apps built fast, often with AI coding tools, ship Supabase tables with
+              row-level security missing or too loose, so anyone with your public key
+              can read them. Free scanners can tell you that. Buko fixes it: it checks
+              your own schema, writes the policies that should be there, and stops a
+              bad change before it ships.
             </p>
             <form class="hero-form" action="https://formspree.io/f/xrpqrjne" method="POST">
               <input type="hidden" name="_subject" value="Buko early access request" />
@@ -56,25 +57,25 @@
               <input class="field" type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
               <button class="button" type="submit">Request early access</button>
             </form>
-            <p class="form-note">We&rsquo;ll only use your email to tell you about Buko.</p>
+            <p class="form-note">The CLI and GitHub check are in early access. We&rsquo;ll only use your email to tell you about Buko.</p>
           </div>
 
           <figure class="report" id="report">
-            <div class="sheet" role="img" aria-label="Example Buko report on a test router image: five possible bugs found, two confirmed with a crash in emulation, three ruled out.">
+            <div class="sheet" role="img" aria-label="Example Buko check on a test project: five tables checked, two need a fix and have one written, three pass.">
               <div class="sheet-head" aria-hidden="true">
-                <p class="sheet-title">Release report</p>
-                <p class="sheet-meta">example-router-2.4.bin</p>
+                <p class="sheet-title">Schema check</p>
+                <p class="sheet-meta">example-project / public</p>
               </div>
               <ol class="checks" aria-hidden="true">
-                <li class="is-confirmed"><span class="c-wall">Memory</span><span class="c-test"><code>httpd</code> known Host header overflow, now in this model</span><span class="c-result confirmed">Confirmed</span></li>
-                <li class="is-confirmed"><span class="c-wall">Injection</span><span class="c-test"><code>cgi</code> known NTP field injection, new in 2.4</span><span class="c-result confirmed">Confirmed</span></li>
-                <li><span class="c-wall">Memory</span><span class="c-test"><code>upnpd</code> packet length could wrap around</span><span class="c-result ruled">Ruled out</span></li>
-                <li><span class="c-wall">Format</span><span class="c-test"><code>logd</code> user text passed to a log format</span><span class="c-result ruled">Ruled out</span></li>
-                <li><span class="c-wall">Update</span><span class="c-test"><code>updater</code> firmware signature may be skipped</span><span class="c-result ruled">Ruled out</span></li>
+                <li class="is-confirmed"><span class="c-wall">No RLS</span><span class="c-test"><code>profiles</code> row-level security is off, readable by anyone</span><span class="c-result confirmed">Fix ready</span></li>
+                <li class="is-confirmed"><span class="c-wall">Loose rule</span><span class="c-test"><code>orders</code> any signed-in user can read every row</span><span class="c-result confirmed">Fix ready</span></li>
+                <li><span class="c-wall">Owner check</span><span class="c-test"><code>invoices</code> rows readable only by their owner</span><span class="c-result ruled">Passes</span></li>
+                <li><span class="c-wall">Public data</span><span class="c-test"><code>plans</code> public by design, read-only</span><span class="c-result ruled">Passes</span></li>
+                <li><span class="c-wall">Locked</span><span class="c-test"><code>audit_log</code> no access with the public key</span><span class="c-result ruled">Passes</span></li>
               </ol>
-              <p class="sheet-total" aria-hidden="true"><span>2 confirmed</span><span class="muted">3 ruled out</span></p>
+              <p class="sheet-total" aria-hidden="true"><span>2 fixes ready</span><span class="muted">3 pass</span></p>
             </div>
-            <figcaption>Example report from a test image. Each lead is checked against known bug families, and only confirmed bugs reach your team.</figcaption>
+            <figcaption>Example check on a test project. Every finding comes with the policy that fixes it, for your team to review and apply.</figcaption>
           </figure>
         </div>
       </div>
@@ -82,63 +83,42 @@
 
     <section class="section">
       <div class="page">
-        <h2>Finding them first is now the law</h2>
+        <h2>It&rsquo;s happening at scale</h2>
         <p class="section-intro">
-          The EU&rsquo;s Cyber Resilience Act covers almost every connected device sold
-          in Europe. Its reporting rules are already in force.
+          One missing rule is all it takes to put a table of customer data on the open web.
         </p>
         <ol class="escapes">
           <li>
-            <time datetime="2024-12">Dec 2024</time>
-            <div>
-              <h3><a href="https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act">The Act enters into force</a></h3>
-              <p class="who">Regulation (EU) 2024/2847</p>
-              <p>Products with digital elements sold in the EU have to meet security requirements for as long as they&rsquo;re supported.</p>
-            </div>
-          </li>
-          <li>
             <time datetime="2026-09">Sep 2026</time>
             <div>
-              <h3><a href="https://digital-strategy.ec.europa.eu/en/policies/cra-reporting">Reporting begins</a></h3>
-              <p class="who">European Commission</p>
-              <p>Manufacturers must report actively exploited vulnerabilities in their products, with an early warning within 24 hours.</p>
-            </div>
-          </li>
-          <li>
-            <time datetime="2027-12">Dec 2027</time>
-            <div>
-              <h3><a href="https://commission.europa.eu/news-and-media/news/safer-and-more-secure-digital-products-2026-09-11_en">Full obligations apply</a></h3>
-              <p class="who">European Commission</p>
-              <p>Products must ship without known exploitable vulnerabilities, and manufacturers must handle new ones for the life of the product.</p>
+              <h3><a href="https://www.upguard.com/labs/research/everything-everywhere-systemic-data-exposure-in-supabase-apps">16,326 databases with readable tables</a></h3>
+              <p class="who">UpGuard research</p>
+              <p>UpGuard found 16,326 Supabase databases exposing readable tables. More than half showed signs of personal data in their schemas.</p>
             </div>
           </li>
         </ol>
         <p class="section-close">
-          Shipping a known exploitable bug is exactly what the Act rules out. A bug you find yourself is a fix. A bug someone else finds first can be a report to a regulator.
+          Finding the gap is free. Closing it correctly, and keeping it closed as your schema changes, is the work. That&rsquo;s what Buko does.
         </p>
       </div>
     </section>
 
     <section class="section" id="looks-for">
       <div class="page">
-        <h2>What it looks for</h2>
-        <p class="section-intro">The bug families that keep coming back, release after release, and turn a device into someone else&rsquo;s device.</p>
+        <h2>What it fixes</h2>
+        <p class="section-intro">The mistakes that turn a database behind your app into a database anyone can read.</p>
         <dl class="walls">
           <div>
-            <dt>Memory bugs</dt>
-            <dd>Overflows and use-after-free in the C code that handles outside input: web servers, network services, parsers.</dd>
+            <dt>Row-level security off</dt>
+            <dd>Tables your public key can reach with no rules at all, so every row is readable, and sometimes writable.</dd>
           </div>
           <div>
-            <dt>Command injection</dt>
-            <dd>Settings fields and admin pages whose input ends up in a shell command.</dd>
+            <dt>Rules that let too much through</dt>
+            <dd>Policies that only check that someone is signed in, or always say yes, instead of checking who owns the row.</dd>
           </div>
           <div>
-            <dt>Secrets and updates</dt>
-            <dd>Hard-coded passwords and keys, and update paths that install firmware without checking where it came from.</dd>
-          </div>
-          <div>
-            <dt>Old components</dt>
-            <dd>Outdated libraries and vendor SDKs inside the image, checked for whether the known bug can actually be reached.</dd>
+            <dt>Changes that reopen a hole</dt>
+            <dd>A new migration that adds a table without rules or loosens one that was fine.</dd>
           </div>
         </dl>
       </div>
@@ -149,16 +129,16 @@
         <h2>How it works</h2>
         <ol class="steps">
           <li>
-            <h3>Send a firmware image</h3>
-            <p>Start with one image, the same file you ship to devices. No source code needed.</p>
+            <h3>Point it at your project</h3>
+            <p>Run one command against your own Supabase project or its migrations. It reads your schema and policies, not your app&rsquo;s code.</p>
           </li>
           <li>
-            <h3>It checks for known bug families</h3>
-            <p>It unpacks and decompiles the image, looks for the bug families already found in other products and earlier releases, and runs every suspected match in emulation.</p>
+            <h3>It writes the fix</h3>
+            <p>For each table that&rsquo;s open, it writes the row-level security policy that should be there, as a migration your team reviews and applies.</p>
           </li>
           <li>
-            <h3>You get proof, every release</h3>
-            <p>Each confirmed bug comes with where it is, the input that triggers it and the crash it causes. Leads that don&rsquo;t reproduce are dropped, so your team doesn&rsquo;t chase noise. Then it checks each new release as you ship it.</p>
+            <h3>It keeps it closed</h3>
+            <p>Add it as a check on your GitHub pull requests, and a change that opens a new hole fails before it ships. Next on the roadmap: ongoing monitoring, and backends beyond Supabase.</p>
           </li>
         </ol>
       </div>
@@ -166,13 +146,13 @@
 
     <section class="section" id="trust">
       <div class="page">
-        <h2>How we handle your firmware</h2>
-        <p class="section-intro">Firmware is your product. Here&rsquo;s what we commit to.</p>
+        <h2>How we handle your data</h2>
+        <p class="section-intro">Your database holds your customers&rsquo; data. Here&rsquo;s what we commit to.</p>
         <ul class="promises">
-          <li><strong>It stays yours.</strong> Never shared, never used to train AI models, and deleted when you ask.</li>
-          <li><strong>It&rsquo;s analyzed in isolation.</strong> Each image runs in its own sealed environment with no outside network access.</li>
-          <li><strong>You hear about bugs first.</strong> We never publish or report a bug in your product without your agreement.</li>
-          <li><strong>On your own servers, if you need it.</strong> For teams that can&rsquo;t send firmware out, we&rsquo;re building a version that runs inside your environment.</li>
+          <li><strong>Only your own projects.</strong> Buko checks projects you own or are authorized to test, never anyone else&rsquo;s.</li>
+          <li><strong>Schema, not rows.</strong> The check looks at your tables and policies, not the customer data inside them.</li>
+          <li><strong>You approve every change.</strong> Fixes arrive as migrations for you to review. Buko never changes your database on its own.</li>
+          <li><strong>It runs where you work.</strong> A command-line tool on your machine and a check in your own GitHub repository.</li>
         </ul>
       </div>
     </section>
@@ -181,9 +161,9 @@
       <div class="page">
         <h2>Who it&rsquo;s for</h2>
         <ul class="audience">
-          <li>Product security teams at device makers who can&rsquo;t review every firmware release by hand</li>
-          <li>Manufacturers selling into the EU who have to ship without known exploitable vulnerabilities</li>
-          <li>Security consultancies and pen testers who assess connected devices</li>
+          <li>Small B2B SaaS teams on Supabase who are facing customer security reviews</li>
+          <li>Founders who built fast, often with AI coding tools, and want to know what&rsquo;s exposed</li>
+          <li>Agencies and freelancers who ship Supabase apps for clients</li>
         </ul>
       </div>
     </section>
@@ -199,14 +179,9 @@
             <p>
               Evan is a senior security engineer at a physical AI company. He has
               spent his career in security across banking, aerospace and defense,
-              with deep experience in C/C++ and binary analysis, the skills
-              firmware security runs on. Previously at Boeing, General Atomics and
-              First Bank.
+              doing penetration testing, secure design reviews and code reviews.
+              Previously at Boeing, General Atomics and First Bank.
             </p>
-            <blockquote>
-              &ldquo;Firmware is where the worst bugs hide and where the fewest people
-              look. I want every bug report to come with proof.&rdquo;
-            </blockquote>
             <p class="creds">M.S. Cybersecurity, Johns Hopkins University. HTB Certified Bug Bounty Hunter (CBBH).</p>
           </div>
         </article>
@@ -218,7 +193,7 @@
         <div>
           <h2>Request early access</h2>
           <p class="section-intro">
-            We&rsquo;re working with a small number of device makers before launch.
+            We&rsquo;re working with a small number of teams before launch.
             Leave your email and we&rsquo;ll be in touch.
           </p>
         </div>
@@ -230,8 +205,8 @@
           </div>
           <label for="ea-email">Email</label>
           <input class="field" id="ea-email" type="email" name="email" placeholder="you@company.com" required />
-          <label for="ea-devices">What kind of devices do you make? (optional)</label>
-          <input class="field" id="ea-devices" type="text" name="devices" placeholder="Routers, cameras, industrial controllers" />
+          <label for="ea-stack">What&rsquo;s your app built on? (optional)</label>
+          <input class="field" id="ea-stack" type="text" name="stack" placeholder="Supabase, Firebase, Postgres" />
           <button class="button" type="submit">Request early access</button>
         </form>
       </div>
@@ -244,6 +219,7 @@
       <div>
         <p class="footer-brand">Buko Technologies</p>
         <p>&copy; <span id="year">2026</span> Buko Technologies. All rights reserved.</p>
+        <p>Supabase is a trademark of Supabase, Inc. Buko is independent and not affiliated with or endorsed by Supabase.</p>
       </div>
       <div>
         <p><a href="mailto:hello@bukotechnologies.com">hello@bukotechnologies.com</a></p>
